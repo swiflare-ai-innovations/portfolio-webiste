@@ -1,0 +1,16 @@
+/* Global Overrides for Full-Screen Editorial Design */
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default Vite styles that restrict layout */
+body {
+  margin: 0;
+  display: flex;
+  place-items: initial;
+  min-width: 100%;
+  min-height: 100vh;
+}

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    /* Lenis handles smooth scrolling — native smooth-scroll causes
+       the browser to animate scroll restoration on page load */
+    scroll-behavior: auto;
+  }
+  
+  body {
+    @apply text-editorial-text bg-editorial-bg antialiased selection:bg-editorial-accent/20 selection:text-editorial-text;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-normal;
+  }
+
+  p {
+    @apply font-sans font-light leading-relaxed;
+  }
+}
+
+/* Custom Animation Utilities */
+.ease-expo {
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+/* Arched Image Utility */
+.rounded-t-full {
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+}
+
+
+
