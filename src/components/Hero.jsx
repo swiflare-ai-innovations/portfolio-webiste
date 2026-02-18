@@ -170,7 +170,7 @@ const Hero = () => {
         <section 
             ref={containerRef} 
             id="home" 
-            className="relative w-full bg-editorial-silk overflow-hidden flex flex-col items-center pt-40 md:pt-32 pb-8 md:pb-12 "
+            className="relative w-full bg-editorial-silk overflow-hidden flex flex-col items-center pt-16 sm:pt-20 md:pt-32 pb-8 md:pb-12"
             style={{ 
                 minHeight: '100vh',
                 height: '100vh',
@@ -192,35 +192,47 @@ const Hero = () => {
             </div>
 
             {/* 2. LAYER: MID - The Portrait with Floating Frame */}
-            <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-20 lg:gap-32 h-full">
+            <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col md:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-20 lg:gap-32 h-full">
                 
                 {/* Left Side: Editorial Content */}
                 <div className="w-full md:w-1/2 flex flex-col items-start text-left order-2 md:order-1 mt-4 md:mt-0">
                     <div className="hero-reveal space-y-2 mb-4 md:mb-8">
                         <div className="flex items-center gap-3">
-                            <span className="w-8 h-[1px] bg-editorial-accent"></span>
-                            <p className="text-[10px] font-bold tracking-[0.4em] uppercase">Obstetrician & Gynaecologist</p>
+                            <span className="w-6 sm:w-8 h-[1px] bg-editorial-accent"></span>
+                            <p className="text-[8px] sm:text-[10px] font-bold tracking-[0.3em] sm:tracking-[0.4em] uppercase">Obstetrician & Gynaecologist</p>
                         </div>
-                        <h1 className="hero-title-main font-serif text-5xl sm:text-6xl md:text-[7rem] leading-[0.9] text-editorial-text tracking-tighter">
+                        <h1 className="hero-title-main font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[7rem] leading-[0.9] text-editorial-text tracking-tighter">
                             Dr. Kanaga <br />
                             <span className="italic text-editorial-accent ml-[5%]">Lakshmi</span>
                         </h1>
                     </div>
 
-                    <div className="hero-reveal max-w-sm">
-                        <p className="font-serif italic text-base md:text-xl text-editorial-subtext leading-relaxed border-l-2 border-editorial-accent/30 pl-6 py-2">
+                    <div className="hero-reveal max-w-sm sm:max-w-md">
+                        <p className="font-serif italic text-sm sm:text-base md:text-xl text-editorial-subtext leading-relaxed border-l-2 border-editorial-accent/30 pl-4 sm:pl-6 py-1 sm:py-2">
                             "Specializing in High Risk Obstetrics and Fertility with over 10 years of dedicated clinical experience."
                         </p>
                     </div>
 
-                    <div className="hero-reveal mt-6 md:mt-12 flex items-center gap-8">
-                        <a href="#appointment" className="group relative px-8 py-4 bg-editorial-text text-white text-[11px] font-bold tracking-[0.3em] uppercase transition-all duration-300 hover:bg-editorial-accent overflow-hidden">
+                    {/* Buttons Section - Mobile Optimized */}
+                    <div className="hero-reveal mt-6 sm:mt-8 md:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-8 w-full">
+                        {/* Primary CTA - Full width on mobile */}
+                        <a 
+                            href="#appointment" 
+                            className="group relative w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-editorial-text text-white text-[10px] sm:text-[11px] font-bold tracking-[0.2em] sm:tracking-[0.3em] uppercase transition-all duration-300 hover:bg-editorial-accent overflow-hidden text-center"
+                        >
                             <span className="relative z-10">Book Consultation</span>
                             <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></div>
                         </a>
+                        
+                        {/* Credentials - Hidden on mobile, visible on tablet+ */}
                         <div className="hidden lg:flex flex-col gap-1">
-                            <span className="text-[9px] font-bold uppercase tracking-widest">Credentials</span>
-                            <span className="text-[10px] text-editorial-subtext font-serif italic">MS OG · MRCOG (UK)</span>
+                            <span className="text-[8px] sm:text-[9px] font-bold uppercase tracking-widest">Credentials</span>
+                            <span className="text-[9px] sm:text-[10px] text-editorial-subtext font-serif italic">MS OG · MRCOG (UK)</span>
+                        </div>
+                        
+                        {/* Mobile Credentials - Simple text for mobile */}
+                        <div className="flex lg:hidden flex-row sm:flex-col items-center sm:items-start gap-2 sm:gap-1">
+                            <span className="text-[8px] font-bold uppercase tracking-widest text-editorial-subtext">MS OG · MRCOG (UK)</span>
                         </div>
                     </div>
                 </div>
@@ -229,13 +241,13 @@ const Hero = () => {
                 <div className="w-full md:w-[45%] flex justify-center order-1 md:order-2 flex-shrink-0">
                     <div className="relative group">
                         {/* Decorative Frames */}
-                        <div className="absolute -inset-4 border border-editorial-accent/20 rounded-t-full -z-10 transition-transform duration-700 group-hover:scale-105"></div>
-                        <div className="absolute -inset-8 border border-editorial-accent/10 rounded-t-full -z-10 transition-transform duration-1000 group-hover:scale-110"></div>
+                        <div className="absolute -inset-3 sm:-inset-4 border border-editorial-accent/20 rounded-t-full -z-10 transition-transform duration-700 group-hover:scale-105"></div>
+                        <div className="absolute -inset-6 sm:-inset-8 border border-editorial-accent/10 rounded-t-full -z-10 transition-transform duration-1000 group-hover:scale-110"></div>
                         
                         {/* Main Image Container */}
                         <div 
                             ref={imageRef} 
-                            className="relative w-[52vw] max-w-[240px] md:max-w-none md:w-[28vw] aspect-[3/4.2] rounded-t-full overflow-hidden bg-editorial-bg"
+                            className="relative w-[60vw] sm:w-[52vw] max-w-[220px] sm:max-w-[240px] md:max-w-none md:w-[28vw] aspect-[3/4.2] rounded-t-full overflow-hidden bg-editorial-bg"
                             style={{ willChange: 'transform, clip-path' }}
                         >
                             <img 
@@ -248,8 +260,6 @@ const Hero = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-editorial-text/20 via-transparent to-transparent"></div>
                             <div className="absolute inset-0 pointer-events-none border border-white/5 rounded-t-full"></div>
                         </div>
-
-                  
                     </div>
                 </div>
             </div>
