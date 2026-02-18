@@ -74,7 +74,7 @@ const Contact = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} id="contact" className="relative min-h-screen bg-editorial-silk py-28 overflow-hidden flex flex-col justify-between">
+        <section ref={sectionRef} id="contact" className="relative min-h-screen bg-editorial-silk pt-28 overflow-hidden flex flex-col justify-between">
             
             {/* The Cinematic Signature Background */}
             <div className="absolute bottom-0 left-0 w-full overflow-hidden pointer-events-none select-none z-0" style={{ opacity: 0, visibility: 'hidden' }}>
