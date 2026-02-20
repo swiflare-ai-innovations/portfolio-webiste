@@ -52,11 +52,11 @@ const Appointment = () => {
     };
 
     return (
-        <section ref={sectionRef} id="appointment" className="relative py-28 bg-white overflow-hidden isolate">
+        <section ref={sectionRef} id="appointment" className="relative py-16 sm:py-20 md:py-24 lg:py-28 bg-white overflow-hidden isolate">
             
             {/* Background Narrative */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none select-none z-0">
-                <span className="appointment-bg-accent absolute top-10 right-10 font-serif italic text-[35vw] text-editorial-accent opacity-[0.03] leading-none">
+                <span className="appointment-bg-accent absolute top-10 right-10 font-serif text-[35vw] text-editorial-accent opacity-[0.03] leading-none">
                     Booking
                 </span>
             </div>
@@ -69,9 +69,9 @@ const Appointment = () => {
                         <span className="w-1.5 h-1.5 rounded-full bg-editorial-accent"></span>
                         <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-editorial-subtext">Booking</span>
                     </div>
-                    <h2 className="appointment-reveal font-serif text-6xl md:text-8xl lg:text-9xl text-editorial-text tracking-tighter leading-[0.85]">
+                    <h2 className="appointment-reveal font-serif text-6xl md:text-6xl lg:text-6xl text-editorial-text tracking-tighter leading-[0.85]">
                         Request Your <br />
-                        <span className="italic text-editorial-accent ml-[5%]">Consultation</span>
+                        <span className="text-editorial-accent ml-[5%]">Consultation</span>
                     </h2>
                 </div>
 
@@ -81,7 +81,7 @@ const Appointment = () => {
                     <div className="lg:col-span-4 space-y-12">
                         <div className="appointment-reveal space-y-4" style={{ opacity: 0, visibility: 'hidden' }}>
                             <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-editorial-accent">The Protocol</p>
-                            <h3 className="font-serif text-3xl italic text-editorial-text leading-tight">Professional Triage & Coordination</h3>
+                            <h3 className="font-serif text-3xl text-editorial-text leading-tight">Professional Triage & Coordination</h3>
                             <p className="text-editorial-subtext/70 font-light leading-relaxed">
                                 Our clinical team will evaluate your request and coordinate a prioritized consultation within 24 hours.
                             </p>
@@ -90,7 +90,7 @@ const Appointment = () => {
                         <div className="appointment-reveal pt-8 border-t border-editorial-border/60 space-y-8" style={{ opacity: 0, visibility: 'hidden' }}>
                             <div className="space-y-2">
                                 <p className="text-[9px] uppercase tracking-widest opacity-40">Primary Center</p>
-                                <p className="font-serif italic text-xl">Dr. Aravind's IVF, Adyar</p>
+                                <p className="font-serif text-xl">Dr. Aravind's IVF, Adyar</p>
                                 <p className="text-xs text-editorial-subtext/60 max-w-[180px]">Kasthuribai Nagar, Adyar, Chennai - 600020</p>
                             </div>
                             

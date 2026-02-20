@@ -173,14 +173,14 @@ const Expertise = () => {
     ];
 
     return (
-        <section ref={sectionRef} id="expertise" className="py-28 bg-editorial-silk relative overflow-hidden isolate">
+        <section ref={sectionRef} id="expertise" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-editorial-silk relative overflow-hidden isolate">
             
             {/* Minimalist Background Elements */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
-                <div className="floating-bg-element absolute top-[15%] -right-12 font-serif italic text-[20vw] leading-none text-editorial-text opacity-[0.01]">
+                <div className="floating-bg-element absolute top-[15%] -right-12 font-serif text-[20vw] leading-none text-editorial-text opacity-[0.01]">
                     Clinical
                 </div>
-                <div className="floating-bg-element absolute bottom-[15%] -left-12 font-serif italic text-[20vw] leading-none text-editorial-accent opacity-[0.01]">
+                <div className="floating-bg-element absolute bottom-[15%] -left-12 font-serif text-[20vw] leading-none text-editorial-accent opacity-[0.01]">
                     Scholar
                 </div>
             </div>
@@ -194,13 +194,13 @@ const Expertise = () => {
                             <span className="w-1.5 h-1.5 rounded-full bg-editorial-accent"></span>
                             <span className="text-[9px] font-bold tracking-[0.3em] uppercase text-editorial-subtext">Expertise</span>
                         </div>
-                        <h2 className="header-title font-serif text-5xl md:text-7xl text-editorial-text tracking-tight leading-[1.1]">
+                        <h2 className="header-title font-serif text-5xl md:text-6xl text-editorial-text tracking-tight leading-[1.1]">
                             Precision in <br />
-                            <span className="italic text-editorial-accent">Clinical Practice</span>
+                            <span className="text-editorial-accent">Clinical Practice</span>
                         </h2>
                     </div>
                     <div className="header-quote border-l border-editorial-accent/30 pl-8">
-                        <p className="font-serif italic text-xl text-editorial-subtext/80 leading-relaxed max-w-md">
+                        <p className="font-serif text-xl text-editorial-subtext/80 leading-relaxed max-w-md">
                             "Bridging complex clinical challenges with evidence-based academic research to redefine standard of care."
                         </p>
                     </div>
@@ -241,7 +241,7 @@ const Expertise = () => {
                             <div className="relative z-10 space-y-10">
                                 <div className="space-y-1">
                                     <p className="text-[9px] font-bold tracking-[0.3em] uppercase text-editorial-accent">The Academic Core</p>
-                                    <h3 className="font-serif text-3xl italic">Scholarship</h3>
+                                    <h3 className="font-serif text-3xl">Scholarship</h3>
                                 </div>
 
                                 <div className="space-y-6">
@@ -249,7 +249,7 @@ const Expertise = () => {
                                         <div key={i} className="space-y-0.5 group/pillar">
                                             <p className="text-[8px] font-bold tracking-widest text-editorial-accent/50 uppercase group-hover/pillar:text-editorial-accent transition-colors">{pillar.label}</p>
                                             <p className="text-lg font-light leading-tight">{pillar.value}</p>
-                                            <p className="text-[10px] italic text-white/30">{pillar.sub}</p>
+                                            <p className="text-[10px] text-white/30">{pillar.sub}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -263,7 +263,7 @@ const Expertise = () => {
                                 </div>
                                 <div className="space-y-0.5">
                                     <p className="text-[9px] font-bold tracking-widest uppercase text-editorial-subtext">Global Trust</p>
-                                    <p className="text-xs font-light text-editorial-subtext/70 italic">Universal communication excellence.</p>
+                                    <p className="text-xs font-light text-editorial-subtext/70">Universal communication excellence.</p>
                                 </div>
                             </div>
                         </div>
@@ -275,7 +275,7 @@ const Expertise = () => {
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
                         <div className="space-y-1 text-center lg:text-left">
                             <p className="text-[9px] font-bold tracking-[0.3em] uppercase text-editorial-accent">Connectivity</p>
-                            <h4 className="font-serif text-2xl italic text-editorial-text">Linguistic Versatility</h4>
+                            <h4 className="font-serif text-2xl text-editorial-text">Linguistic Versatility</h4>
                         </div>
                         
                         <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6">

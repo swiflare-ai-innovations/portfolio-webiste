@@ -7,19 +7,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        // "Old Money" / Editorial Palette (Hero/Header)
-        editorial: {
-          bg: '#F2EEE3', // Travertine Beige
-          silk: '#FAF9F6', // Oatmeal Silk
-          text: '#2D2823', // Espresso Brown
-          subtext: '#6B645C', // Taupe
-          accent: '#C2A378', // Warm Gold/Beige
-          border: '#E2DED0',
-        },
+        'editorial-bg': 'var(--color-bg)',
+        'editorial-charcoal': 'var(--color-text)',
+        'editorial-text': 'var(--color-text)',
+        'editorial-accent': 'var(--color-accent)',
+        'editorial-subtext': 'var(--color-subtext)',
+        'editorial-border': 'var(--color-border)',
+        'editorial-silk': 'var(--color-silk)',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        sans: ['Open Sans', 'sans-serif'],
+        serif: ['Montserrat', 'sans-serif'],
       },
       borderRadius: {
         'arch': '10rem 10rem 0 0',
@@ -30,6 +28,10 @@ export default {
       letterSpacing: {
         'editorial': '-0.03em',
         'widest': '0.2em',
+      },
+      fontSize: {
+        'sm': ['0.925rem', { lineHeight: '1.375rem' }], // ~14.8px
+        'base': ['1.05rem', { lineHeight: '1.625rem' }], // ~16.8px
       }
     },
   },

@@ -1,10 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-bg: #FDFBF7;
+    --color-text: #1A1A1A;
+    --color-accent: #C5A059;
+    --color-subtext: #4A4A4A;
+    --color-border: #E5E5E5;
+    --color-silk: #F9F7F2;
+  }
+
+  [data-theme="blue"] {
+    --color-bg: #FFFFFF;
+    --color-text: #0F172A;
+    --color-accent: #2563EB;
+    --color-subtext: #475569;
+    --color-border: #E2E8F0;
+    --color-silk: #F8FAFC;
+  }
+
+  [data-theme="sage"] {
+    --color-bg: #F2F4F2;
+    --color-text: #1A2421;
+    --color-accent: #4A675D;
+    --color-subtext: #4A5551;
+    --color-border: #D1D5D1;
+    --color-silk: #E8EDE8;
+  }
+
   html {
     /* Lenis handles smooth scrolling — native smooth-scroll causes
        the browser to animate scroll restoration on page load */
@@ -12,15 +39,18 @@
   }
   
   body {
-    @apply text-editorial-text bg-editorial-bg antialiased selection:bg-editorial-accent/20 selection:text-editorial-text;
+    @apply text-editorial-text bg-editorial-bg antialiased selection:bg-editorial-accent selection:text-editorial-text;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif font-normal;
+    transition: color 0.5s ease;
   }
 
   p {
-    @apply font-sans font-light leading-relaxed;
+    @apply font-sans font-light leading-relaxed text-[1.05rem];
+    transition: color 0.5s ease;
   }
 }
 

@@ -43,12 +43,12 @@ const About = () => {
             </span>
           </div>
           
-          <h2 className="about-reveal font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-editorial-text tracking-tight">
-            Dedicated to <br className="hidden sm:block" /><span className="italic text-editorial-accent">Women's Health</span>
+          <h2 className="about-reveal font-serif text-4xl sm:text-5xl md:text-6xl lg:text-6xl leading-[1.1] text-editorial-text tracking-tight">
+            Dedicated to <br className="hidden sm:block" /><span className="text-editorial-accent">Women's Health</span>
           </h2>
           
           <div className="about-reveal space-y-4 sm:space-y-6 md:space-y-8 max-w-xl">
-            <p className="font-serif italic text-xl sm:text-2xl md:text-3xl text-editorial-subtext/90 leading-relaxed">
+            <p className="font-serif text-xl sm:text-2xl md:text-2xl text-editorial-subtext/90 leading-relaxed">
               "Dedicated obstetrician, gynaecologist and fertility specialist with 10 years of post PG experience aiming to extend my love to serve the community with my knowledge and skills."
             </p>
             
@@ -67,27 +67,27 @@ const About = () => {
             <span className="text-[8px] sm:text-[9px] font-bold tracking-widest text-editorial-accent uppercase block">
               Specialization
             </span>
-            <p className="font-serif text-base sm:text-lg md:text-xl italic text-editorial-text leading-tight">
+            <p className="font-serif text-base sm:text-lg md:text-xl text-editorial-text leading-tight">
               Fertility Specialist
             </p>
           </div>
           
           {/* Card 2 - with translate on desktop only */}
-          <div className="about-reveal bg-editorial-text p-4 sm:p-6 md:p-8 lg:p-10 space-y-2 sm:space-y-3 md:space-y-4 lg:translate-y-8 rounded-xl sm:rounded-2xl">
-            <span className="text-[8px] sm:text-[9px] font-bold tracking-widest text-editorial-accent/60 uppercase block">
+          <div className="about-reveal bg-editorial-accent p-4 sm:p-6 md:p-8 lg:p-10 space-y-2 sm:space-y-3 md:space-y-4 lg:translate-y-8 rounded-xl sm:rounded-2xl shadow-lg border border-editorial-accent/20">
+            <span className="text-[8px] sm:text-[9px] font-bold tracking-widest text-white/60 uppercase block">
               Focus Area
             </span>
-            <p className="font-serif text-base sm:text-lg md:text-xl italic text-white/90 leading-tight">
+            <p className="font-serif text-base sm:text-lg md:text-xl text-white leading-tight">
               High Risk Obstetrics
             </p>
           </div>
           
           {/* Card 3 - with negative translate on desktop only */}
-          <div className="about-reveal bg-editorial-accent/10 border border-editorial-accent/20 p-4 sm:p-6 md:p-8 lg:p-10 space-y-2 sm:space-y-3 md:space-y-4 lg:-translate-y-8 rounded-xl sm:rounded-2xl">
+          <div className="about-reveal bg-editorial-accent/10 border border-editorial-accent/20 backdrop-blur-xl p-4 sm:p-6 md:p-8 lg:p-10 space-y-2 sm:space-y-3 md:space-y-4 lg:-translate-y-8 rounded-xl sm:rounded-2xl">
             <span className="text-[8px] sm:text-[9px] font-bold tracking-widest text-editorial-accent uppercase block">
               Advanced Surgery
             </span>
-            <p className="font-serif text-base sm:text-lg md:text-xl italic text-editorial-text leading-tight">
+            <p className="font-serif text-base sm:text-lg md:text-xl text-editorial-text leading-tight">
               Hysteroscopic & Laparoscopic
             </p>
           </div>
@@ -97,7 +97,7 @@ const About = () => {
             <span className="text-[8px] sm:text-[9px] font-bold tracking-widest text-editorial-accent uppercase block">
               Academic Focus
             </span>
-            <p className="font-serif text-base sm:text-lg md:text-xl italic text-editorial-text leading-tight">
+            <p className="font-serif text-base sm:text-lg md:text-xl text-editorial-text leading-tight">
               Teaching & Research
             </p>
           </div>
@@ -106,7 +106,7 @@ const About = () => {
       
       {/* Decorative Text Seal - hidden on mobile */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 opacity-[0.02] pointer-events-none -rotate-90 select-none hidden lg:block">
-        <span className="text-[10rem] xl:text-[15rem] font-serif italic text-editorial-text">Experience</span>
+        <span className="text-[10rem] xl:text-[15rem] font-serif text-editorial-text">Experience</span>
       </div>
     </section>
   );

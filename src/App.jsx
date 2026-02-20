@@ -10,6 +10,7 @@ import Expertise from './components/Expertise';
 import Contact from './components/Contact';
 import Header from './components/Header';
 import Appointment from './components/Appointment';
+import ThemeSwitcher from './components/ThemeSwitcher';
 
 const App = () => {
   useEffect(() => {
@@ -77,6 +78,7 @@ const App = () => {
             <Appointment />
             <Contact />
         </main>
+        <ThemeSwitcher />
     </div>
   );
 }

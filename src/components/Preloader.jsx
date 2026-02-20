@@ -42,7 +42,7 @@ const Preloader = ({ onComplete }) => {
         <div ref={containerRef} className="fixed inset-0 bg-editorial-text z-[10000] flex flex-col items-center justify-center text-editorial-bg overflow-hidden px-6">
             <div ref={textRef} className="text-center">
                 <p className="text-[10px] font-bold tracking-[0.4em] uppercase mb-6 text-editorial-accent">Clinical Excellence</p>
-                <h1 className="text-3xl md:text-5xl font-serif italic mb-6">
+                <h1 className="text-3xl md:text-5xl font-serif mb-6">
                     Dr. Kanaga Lakshmi
                 </h1>
                 <div ref={lineRef} className="h-px w-24 bg-clinical-accent mx-auto origin-center"></div>

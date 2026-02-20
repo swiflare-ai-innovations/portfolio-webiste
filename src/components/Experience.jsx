@@ -157,7 +157,7 @@ const Experience = () => {
     ];
 
     return (
-        <section ref={containerRef} id="experience" className="py-28 bg-editorial-silk relative overflow-hidden isolate">
+        <section ref={containerRef} id="experience" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-editorial-silk relative overflow-hidden isolate">
             
             {/* Background Texture */}
             <div className="absolute inset-0 opacity-[0.01] pointer-events-none select-none z-0 bg-[url('https://www.transparenttextures.com/patterns/pinstripe-light.png')]"></div>
@@ -170,11 +170,11 @@ const Experience = () => {
                         <span className="w-1.5 h-1.5 rounded-full bg-editorial-accent animate-pulse"></span>
                         <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-editorial-subtext">Timeline</span>
                     </div>
-                    <h2 className="font-serif text-5xl md:text-8xl text-editorial-text tracking-tighter leading-none">
+                    <h2 className="font-serif text-5xl md:text-6xl text-editorial-text tracking-tighter leading-none">
                         Clinical <br />
-                        <span className="italic text-editorial-accent">Excellence</span>
+                        <span className="text-editorial-accent">Excellence</span>
                     </h2>
-                    <p className="font-serif italic text-xl text-editorial-subtext opacity-60 max-w-xl mx-auto">
+                    <p className="font-serif text-xl text-editorial-subtext opacity-60 max-w-xl mx-auto">
                         Two decades of surgical precision and academic leadership, documented in chronological sequence.
                     </p>
                 </div>
@@ -198,7 +198,7 @@ const Experience = () => {
                                 
                                 {/* Shadow Year Background */}
                                 <div className={`shadow-year absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 ${i % 2 === 0 ? 'md:justify-start' : 'md:justify-end'}`}>
-                                    <span className="font-serif italic text-[25vw] md:text-[20vw] text-editorial-text leading-none tracking-tighter">
+                                    <span className="font-serif text-[25vw] md:text-[20vw] text-editorial-text leading-none tracking-tighter">
                                         {item.year}
                                     </span>
                                 </div>
@@ -222,7 +222,7 @@ const Experience = () => {
                                                         <h3 className="font-serif text-3xl md:text-4xl text-editorial-text group-hover:text-editorial-accent transition-colors duration-500">
                                                             {item.title}
                                                         </h3>
-                                                        <h4 className="font-serif italic text-xl text-editorial-subtext leading-tight">
+                                                        <h4 className="font-serif text-xl text-editorial-subtext leading-tight">
                                                             {item.role}
                                                         </h4>
                                                     </div>
@@ -258,7 +258,7 @@ const Experience = () => {
                                                         <h3 className="font-serif text-3xl md:text-4xl text-editorial-text group-hover:text-editorial-accent transition-colors duration-500">
                                                             {item.title}
                                                         </h3>
-                                                        <h4 className="font-serif italic text-xl text-editorial-subtext leading-tight">
+                                                        <h4 className="font-serif text-xl text-editorial-subtext leading-tight">
                                                             {item.role}
                                                         </h4>
                                                     </div>
@@ -282,14 +282,27 @@ const Experience = () => {
 
                 </div>
 
-                {/* Closing Statement */}
-                <div className="mt-44 text-center">
-                    <div className="w-[1px] h-24 bg-editorial-accent/20 mx-auto mb-12"></div>
-                    <p className="font-serif italic text-3xl text-editorial-text max-w-2xl mx-auto leading-relaxed">
-                        "Continuously redefining the standards of reproductive healthcare through clinical mastery and academic rigor."
-                    </p>
-                </div>
+                {/* Closing Statement - Integrated Conclusion */}
+                <div className="mt-28 relative max-w-4xl mx-auto px-6">
+                    <div className="relative p-10 md:p-16 bg-editorial-accent/5 rounded-[2rem] border border-editorial-accent/10 overflow-hidden text-center">
+                        {/* Decorative Quote Mark */}
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-editorial-silk rounded-full flex items-center justify-center border border-editorial-accent/10">
+                            <span className="font-serif text-5xl text-editorial-accent leading-none mt-4">"</span>
+                        </div>
 
+                        <div className="relative z-10 space-y-8">
+                            <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-editorial-text leading-tight tracking-tight italic">
+                                Continuously redefining the standards of reproductive healthcare through clinical mastery and academic rigor.
+                            </p>
+                            
+                            <div className="flex items-center justify-center gap-4">
+                                <div className="h-[1px] w-12 bg-editorial-accent/30"></div>
+                                <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-editorial-accent">Philosophy</span>
+                                <div className="h-[1px] w-12 bg-editorial-accent/30"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );
