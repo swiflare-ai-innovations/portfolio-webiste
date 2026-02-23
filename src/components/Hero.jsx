@@ -2,7 +2,7 @@
 import { gsap } from 'gsap';
 import { CustomEase } from 'gsap/all';
 import { ChevronDown, Award, Clock, Shield } from 'lucide-react';
-import doctorimg from '../assets/doctorimage.png';
+import doctorimg from '../assets/image.png';
 
 gsap.registerPlugin(CustomEase);
 
