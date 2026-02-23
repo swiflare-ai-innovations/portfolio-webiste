@@ -78,7 +78,7 @@ const App = () => {
             <Appointment />
             <Contact />
         </main>
-        <ThemeSwitcher />
+        {/* <ThemeSwitcher /> */}
     </div>
   );
 }
