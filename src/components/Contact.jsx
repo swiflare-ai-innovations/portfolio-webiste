@@ -174,11 +174,19 @@ const Contact = () => {
                                     <h4 className="font-serif text-3xl leading-tight">Adyar, Chennai</h4>
                                 </div>
                                 
-                                <address className="not-italic font-serif text-xl text-editorial-subtext leading-relaxed border-l-2 border-editorial-accent/30 pl-8">
-                                    Lakshmi Apartments, <br />
-                                    Kasthuribai Nagar, <br />
-                                    Adyar, Chennai - 600020
-                                </address>
+                                <div className="space-y-6">
+                                    <address className="not-italic font-serif text-xl text-editorial-subtext leading-relaxed border-l-2 border-editorial-accent/30 pl-8">
+                                        <span className="block text-editorial-text font-medium text-sm mb-2 opacity-60 uppercase tracking-wider">MGM Malar Hospital</span>
+                                        Old No. 52 New No. 111, 1 st Main Road,<br />
+                                        Gandhi Nagar, Adyar,<br />
+                                        Chennai - 600020
+                                    </address>
+                                    <address className="not-italic font-serif text-xl text-editorial-subtext leading-relaxed border-l-2 border-editorial-accent/30 pl-8">
+                                        <span className="block text-editorial-text font-medium text-sm mb-2 opacity-60 uppercase tracking-wider">Dr. Aravind's IVF</span>
+                                        Lakshmi Apartments,<br />
+                                        Kasthuribai Nagar, Adyar
+                                    </address>
+                                </div>
 
                                 <div className="pt-8 flex items-center gap-4">
                                     <div className="w-10 h-10 rounded-full border border-editorial-border flex items-center justify-center">

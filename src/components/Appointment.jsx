@@ -89,9 +89,9 @@ const Appointment = () => {
 
                         <div className="appointment-reveal pt-8 border-t border-editorial-border/60 space-y-8" style={{ opacity: 0, visibility: 'hidden' }}>
                             <div className="space-y-2">
-                                <p className="text-[9px] uppercase tracking-widest opacity-40">Primary Center</p>
-                                <p className="font-serif text-xl">Dr. Aravind's IVF, Adyar</p>
-                                <p className="text-xs text-editorial-subtext/60 max-w-[180px]">Kasthuribai Nagar, Adyar, Chennai - 600020</p>
+                                <p className="text-[9px] uppercase tracking-widest opacity-40">Primary Hospital</p>
+                                <p className="font-serif text-xl">MGM Malar Hospital, Adyar</p>
+                                <p className="text-xs text-editorial-subtext/60 max-w-[200px]">Old No. 52 New No. 111, 1 st Main Road, Gandhi Nagar, Chennai - 600020</p>
                             </div>
                             
                             <div className="space-y-1">

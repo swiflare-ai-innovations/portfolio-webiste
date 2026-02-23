@@ -238,22 +238,24 @@ const Hero = () => {
                     <div className="hero-reveal inline-flex items-center gap-3 px-4 py-2 bg-white/60 backdrop-blur-sm border border-editorial-accent/20 rounded-full mb-8">
                         <span className="w-2 h-2 rounded-full bg-editorial-accent animate-pulse"></span>
                         <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-editorial-charcoal">
-                            Trusted by 5,000+ Patients
+                            Trusted by 15,000+ Patients
                         </span>
                     </div>
 
                     {/* Main Title */}
                     <h1 className="hero-title-main font-serif mb-8">
                         <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl leading-tight text-editorial-charcoal tracking-tighter">
-                            Dr. Kanaga <span className="text-editorial-accent font-light">Lakshmi</span>
+                            Dr. K. Kanaga <span className="text-editorial-accent font-light">Lakshmi</span>
+                        </span>
+                        <span className="block text-xl sm:text-2xl mt-4 text-editorial-charcoal/70 font-light">
+                            Consultant at <span className="font-semibold text-editorial-charcoal">MGM Malar Hospital, Adyar</span>
                         </span>
                     </h1>
 
                     {/* Description */}
                     <div className="hero-reveal max-w-2xl mb-12">
                         <p className="font-serif text-lg md:text-xl text-editorial-charcoal/80 leading-relaxed italic">
-                            "Where advanced medical expertise meets compassionate care.
-                            A legacy of over <span className="text-editorial-accent font-bold not-italic">10 years</span> in women's health."
+                            "Delivering world-class surgical precision and uncompromising compassionate care. A distinguished legacy of over <span className="text-editorial-accent font-bold not-italic">10 years</span> dedicated to elevating women's health."
                         </p>
                     </div>
 
@@ -264,8 +266,8 @@ const Hero = () => {
                             <span className="text-[9px] font-bold tracking-widest uppercase text-editorial-subtext mt-1 block">Years Experience</span>
                         </div>
                         <div className="bg-white/40 backdrop-blur-sm p-6 rounded-2xl border border-editorial-border/40 hover:border-editorial-accent/30 transition-colors group">
-                            <span className="block font-serif text-3xl font-bold text-editorial-charcoal group-hover:text-editorial-accent transition-colors">5k+</span>
-                            <span className="text-[9px] font-bold tracking-widest uppercase text-editorial-subtext mt-1 block">Lives Impacted</span>
+                            <span className="block font-serif text-3xl font-bold text-editorial-charcoal group-hover:text-editorial-accent transition-colors">15k+</span>
+                            <span className="text-[9px] font-bold tracking-widest uppercase text-editorial-subtext mt-1 block">Deliveries</span>
                         </div>
                         <div className="col-span-2 sm:col-span-1 bg-editorial-accent/10 p-6 rounded-2xl border border-editorial-accent/20">
                             <span className="block font-serif text-lg font-bold text-editorial-accent leading-tight">MS OG · MRCOG</span>

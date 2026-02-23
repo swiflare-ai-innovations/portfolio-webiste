@@ -148,11 +148,20 @@ const Experience = () => {
         {
             year: '2024',
             period: '2024 - Present',
-            title: 'Leading Precision',
+            title: 'Clinical Leadership',
+            role: 'Consultant Obstetrician & Gynaecologist',
+            institution: 'MGM Malar Hospital, Adyar',
+            desc: 'Delivering world-class healthcare, leading complex gynaecological surgeries, high-risk obstetrics, and clinical management at a premier multi-specialty institution.',
+            type: 'Current'
+        },
+        {
+            year: '2024',
+            period: '2024 - Present',
+            title: 'Fertility Excellence',
             role: 'Consultant Fertility Specialist',
             institution: 'Dr. Aravind’s IVF',
-            desc: 'Continuing the legacy of excellence as a lead specialist in fertility and high-risk obstetrics.',
-            type: 'Current'
+            desc: 'Continuing the legacy of excellence as a lead specialist in fertility and advanced reproductive endocrinology.',
+            type: 'Specialist'
         }
     ];
 
