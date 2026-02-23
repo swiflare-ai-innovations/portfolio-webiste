@@ -238,7 +238,7 @@ const Hero = () => {
                     <div className="hero-reveal inline-flex items-center gap-3 px-4 py-2 bg-white/60 backdrop-blur-sm border border-editorial-accent/20 rounded-full mb-8">
                         <span className="w-2 h-2 rounded-full bg-editorial-accent animate-pulse"></span>
                         <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-editorial-charcoal">
-                            Welcoming New Patients
+                            Trusted by 5,000+ Patients
                         </span>
                     </div>
 
