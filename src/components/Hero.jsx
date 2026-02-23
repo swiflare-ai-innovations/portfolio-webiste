@@ -2,7 +2,7 @@
 import { gsap } from 'gsap';
 import { CustomEase } from 'gsap/all';
 import { ChevronDown, Award, Clock, Shield } from 'lucide-react';
-import doctorimg from '../assets/WhatsApp_Image_2026-02-23_at_12.08.40_PM-removebg-preview.png';
+import doctorimg from '../assets/doctorimage.png';
 
 gsap.registerPlugin(CustomEase);
 
