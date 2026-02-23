@@ -2,6 +2,7 @@
 import { gsap } from 'gsap';
 import { CustomEase } from 'gsap/all';
 import { ChevronDown, Award, Clock, Shield } from 'lucide-react';
+import doctorimg from '../assets/WhatsApp_Image_2026-02-23_at_12.08.40_PM-removebg-preview.png';
 
 gsap.registerPlugin(CustomEase);
 
@@ -323,14 +324,14 @@ const Hero = () => {
                         
                         <div 
                             ref={imageRef}
-                            className="relative aspect-[4/5] overflow-hidden shadow-2xl"
+                            className="relative aspect-[4/5] overflow-hidden shadow-2xl bg-gradient-to-br from-editorial-accent/25 via-rose-100/40 to-amber-50"
                             style={{ 
                                 borderRadius: '60% 40% 30% 70% / 40% 30% 70% 60%',
                                 willChange: 'transform, border-radius'
                             }}
                         >
                             <img 
-                                src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?q=80&w=1887&auto=format&fit=crop" 
+                                src={doctorimg}
                                 alt="Dr. Kanaga Lakshmi" 
                                 className="w-full h-full object-cover object-center scale-105 hover:scale-115 transition-transform duration-[10s]"
                                 loading="eager"
