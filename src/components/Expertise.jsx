@@ -153,21 +153,21 @@ const Expertise = () => {
                     </h2>
                 </div>
 
-                <div className="expertise-container grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                <div className="expertise-container grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                     
-                    {/* Left: Navigation List - Now STICKY on LG+ screens */}
-                    <div className="lg:col-span-5 xl:col-span-4 lg:sticky lg:top-32 space-y-4">
+                    {/* Left: Navigation List - STICKY */}
+                    <div className="lg:col-span-12 xl:col-span-5 sticky top-32 space-y-2">
                         {domainExpertise.map((item, i) => (
                             <button
                                 key={i}
                                 onClick={() => setActiveTab(i)}
-                                className={`expertise-item group w-full text-left p-6 md:p-8 lg:p-10 border-b border-editorial-border/30 transition-all duration-500 relative flex items-center justify-between outline-none ${activeTab === i ? 'bg-white shadow-md border-editorial-accent/30' : 'hover:bg-white/20'}`}
+                                className={`expertise-item group w-full text-left p-6 md:p-8 border-b border-editorial-border/30 transition-all duration-500 relative flex items-center justify-between outline-none ${activeTab === i ? 'bg-white shadow-sm border-editorial-accent/30' : 'hover:bg-white/40'}`}
                             >
-                                <div className="flex items-center gap-6 lg:gap-8">
-                                    <span className={`font-mono text-xs lg:text-sm tracking-widest uppercase transition-colors duration-500 ${activeTab === i ? 'text-editorial-accent' : 'text-editorial-subtext/20'}`}>
+                                <div className="flex items-center gap-6">
+                                    <span className={`font-mono text-[10px] tracking-widest uppercase transition-colors duration-500 ${activeTab === i ? 'text-editorial-accent' : 'text-editorial-subtext/30'}`}>
                                         {item.ref}
                                     </span>
-                                    <h3 className={`font-serif text-2xl md:text-3xl lg:text-4xl transition-all duration-500 ${activeTab === i ? 'text-editorial-text scale-105 origin-left' : 'text-editorial-subtext/40 group-hover:text-editorial-subtext'}`}>
+                                    <h3 className={`font-serif text-2xl md:text-2xl transition-all duration-500 ${activeTab === i ? 'text-editorial-text pl-2' : 'text-editorial-subtext/60 group-hover:text-editorial-subtext'}`}>
                                         {item.title}
                                     </h3>
                                 </div>
@@ -177,15 +177,15 @@ const Expertise = () => {
                                     </svg>
                                 </div>
                                 {activeTab === i && (
-                                    <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-editorial-accent transition-all duration-500"></div>
+                                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-editorial-accent"></div>
                                 )}
                             </button>
                         ))}
                     </div>
 
                     {/* Right: Detailed Content Display */}
-                    <div className="lg:col-span-7 xl:col-span-8">
-                        <div key={activeTab} className="expertise-detail-card bg-white p-8 md:p-12 lg:p-20 border border-editorial-border/30 rounded-[2.5rem] relative overflow-hidden min-h-[750px] flex flex-col justify-between shadow-2xl shadow-editorial-accent/5 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+                    <div className="lg:col-span-12 xl:col-span-7">
+                        <div key={activeTab} className="expertise-detail-card bg-white p-8 md:p-12 lg:p-16 border border-editorial-border/30 rounded-3xl relative overflow-hidden min-h-[500px] flex flex-col justify-between">
                             
                             {/* Decorative Icon Background */}
                             <div className="absolute -top-12 -right-12 text-editorial-accent/5 transform rotate-12 scale-[3]">
@@ -200,20 +200,20 @@ const Expertise = () => {
                                     <h4 className="font-serif text-4xl md:text-5xl text-editorial-text leading-tight">
                                         {domainExpertise[activeTab].title}
                                     </h4>
-                                    <p className="text-xl md:text-2xl text-editorial-subtext leading-relaxed font-light max-w-2xl">
+                                    <p className="text-lg md:text-xl text-editorial-subtext leading-relaxed font-light max-w-2xl">
                                         {domainExpertise[activeTab].description}
                                     </p>
                                 </div>
 
-                                <div className="space-y-8">
-                                    <p className="text-[11px] font-bold tracking-[0.4em] uppercase text-editorial-accent border-b border-editorial-accent/20 pb-4 inline-block">
+                                <div className="space-y-6">
+                                    <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-editorial-accent border-b border-editorial-accent/20 pb-4 inline-block">
                                         Areas of Focus
                                     </p>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
                                         {domainExpertise[activeTab].specialties.map((spec, i) => (
-                                            <div key={i} className="flex items-start gap-4 group/spec">
-                                                <span className="w-2 h-2 rounded-full bg-editorial-accent mt-2.5 group-hover/spec:scale-150 transition-transform"></span>
-                                                <p className="text-lg text-editorial-subtext/80 group-hover/spec:text-editorial-text transition-colors">
+                                            <div key={i} className="flex items-start gap-3 group/spec">
+                                                <span className="w-1.5 h-1.5 rounded-full bg-editorial-accent mt-2 group-hover/spec:scale-150 transition-transform"></span>
+                                                <p className="text-sm md:text-base text-editorial-subtext/80 group-hover/spec:text-editorial-text transition-colors">
                                                     {spec}
                                                 </p>
                                             </div>
@@ -222,20 +222,20 @@ const Expertise = () => {
                                 </div>
                             </div>
 
-                            <div className="relative z-10 pt-16 mt-16 border-t border-editorial-border/30 flex items-center justify-between">
-                                <div className="flex gap-6">
-                                    <div className="h-12 w-px bg-editorial-border/60"></div>
-                                    <div className="space-y-1">
-                                        <p className="text-[9px] font-bold tracking-widest text-editorial-subtext/40 uppercase">Standard of Care</p>
-                                        <p className="text-sm font-medium text-editorial-text italic">Clinical Excellence Guaranteed</p>
+                            <div className="relative z-10 pt-16 mt-auto border-t border-editorial-border/30 flex items-center justify-between">
+                                <div className="flex gap-4">
+                                    <div className="h-10 w-px bg-editorial-border/60"></div>
+                                    <div className="space-y-0.5">
+                                        <p className="text-[8px] font-bold tracking-widest text-editorial-subtext/40 uppercase">Standard of Care</p>
+                                        <p className="text-xs font-medium text-editorial-text italic">Clinical Excellence Guaranteed</p>
                                     </div>
                                 </div>
                                 <button
                                     onClick={() => window.__lenis?.scrollTo('#appointment')}
-                                    className="group flex items-center gap-3 text-[11px] font-bold tracking-[0.3em] uppercase text-editorial-accent hover:text-editorial-text transition-colors"
+                                    className="group flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase text-editorial-accent hover:text-editorial-text transition-colors"
                                 >
                                     Consult Practitioner
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="transform group-hover:translate-x-2 transition-transform">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="transform group-hover:translate-x-1 transition-transform">
                                         <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                     </svg>
                                 </button>
