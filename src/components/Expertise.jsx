@@ -55,26 +55,26 @@ const Expertise = () => {
 
             headerTl.fromTo('.header-tag', 
                 { opacity: 0, x: -20 },
-                { opacity: 1, x: 0, duration: 1, ease: 'power3.out' }
+                { opacity: 1, x: 0, duration: 0.8, ease: 'power2.out' }
             )
             .fromTo('.header-title',
                 { opacity: 0, y: 30 },
-                { opacity: 1, y: 0, duration: 1.2, ease: 'expo.out' },
-                "-=0.8"
+                { opacity: 1, y: 0, duration: 1.0, ease: 'power2.out' },
+                "-=0.6"
             );
 
             // Staggered Item Reveal
             gsap.fromTo('.expertise-item',
-                { opacity: 0, x: -30 },
+                { opacity: 0, x: -20 },
                 {
                     opacity: 1,
                     x: 0,
-                    duration: 1,
-                    stagger: 0.1,
-                    ease: 'power3.out',
+                    duration: 0.8,
+                    stagger: 0.08,
+                    ease: 'power2.out',
                     scrollTrigger: {
                         trigger: '.expertise-container',
-                        start: 'top 80%',
+                        start: 'top 85%',
                     }
                 }
             );
@@ -85,11 +85,11 @@ const Expertise = () => {
                 {
                     opacity: 1,
                     y: 0,
-                    duration: 1.5,
-                    ease: 'expo.out',
+                    duration: 1.0,
+                    ease: 'power2.out',
                     scrollTrigger: {
                         trigger: '.expertise-container',
-                        start: 'top 75%',
+                        start: 'top 80%',
                     }
                 }
             );
@@ -122,8 +122,8 @@ const Expertise = () => {
             ref: "RM-03" 
         },
         { 
-            title: "Minimal Invasive Surgery", 
-            description: "Pioneering laparoscopic and hysteroscopic techniques that prioritize rapid recovery. By utilizing precision instruments and refined surgical methodologies, we minimize patient downtime while maximizing diagnostic and therapeutic accuracy.",
+            title: "Laparoscopic and Robotic Arts", 
+            description: "Pioneering laparoscopic and robotic-assisted techniques that prioritize rapid recovery. By utilizing precision instruments and refined surgical methodologies, we minimize patient downtime while maximizing diagnostic and therapeutic accuracy.",
             specialties: ["Diagnostic Laparoscopy", "Hysteroscopic Interventions", "Robotic-Assisted Concepts", "Safe Surgical Recovery"],
             icon: Icons.Shield,
             ref: "LS-04" 

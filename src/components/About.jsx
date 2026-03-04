@@ -13,13 +13,13 @@ const About = () => {
       // Animate each element when it enters the viewport
       gsap.utils.toArray('.about-reveal').forEach((elem) => {
         gsap.from(elem, {
-          y: 40,
+          y: 30,
           opacity: 0,
-          duration: 1.2,
-          ease: 'power3.out',
+          duration: 1.0,
+          ease: 'power2.out',
           scrollTrigger: {
             trigger: elem,
-            start: 'top 95%', // generous start to ensure they show up
+            start: 'top 92%',
             toggleActions: 'play none none none'
           }
         });
@@ -68,15 +68,15 @@ const About = () => {
               </div>
               
               {/* Card 2 */}
-              <div className="about-reveal bg-editorial-accent p-5 space-y-2 rounded-2xl shadow-lg border border-editorial-accent/20">
-                <span className="text-[8px] font-bold tracking-[0.2em] text-white/50 uppercase block">02 / Focus Area</span>
-                <p className="font-serif text-base text-white leading-tight">High Risk Obstetrics</p>
+              <div className="about-reveal bg-white p-5 border border-editorial-border/40 space-y-2 rounded-2xl shadow-sm transition-all hover:-translate-y-1 hover:shadow-md">
+                <span className="text-[8px] font-bold tracking-[0.2em] text-editorial-subtext/50 uppercase block">02 / Focus Area</span>
+                <p className="font-serif text-base text-editorial-text leading-tight">High Risk Obstetrics</p>
               </div>
               
               {/* Card 3 */}
-              <div className="about-reveal bg-editorial-accent/10 border border-editorial-accent/20 backdrop-blur-xl p-5 space-y-2 rounded-2xl">
-                <span className="text-[8px] font-bold tracking-[0.2em] text-editorial-accent/60 uppercase block">03 / Advanced Surgery</span>
-                <p className="font-serif text-base text-editorial-text leading-tight">Laparoscopic Arts</p>
+              <div className="about-reveal bg-white p-5 border border-editorial-border/40 space-y-2 rounded-2xl shadow-sm transition-all hover:-translate-y-1 hover:shadow-md">
+                <span className="text-[8px] font-bold tracking-[0.2em] text-editorial-subtext/50 uppercase block">03 / Advanced Surgery</span>
+                <p className="font-serif text-base text-editorial-text leading-tight">Laparoscopic and Robotic Arts</p>
               </div>
               
               {/* Card 4 */}

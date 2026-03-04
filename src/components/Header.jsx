@@ -126,8 +126,8 @@ const Header = () => {
                             <span className={`font-serif text-sm sm:text-base md:text-xl font-bold tracking-tight leading-none text-editorial-charcoal whitespace-nowrap`}>
                                 Dr. K. Kanaga Lakshmi
                             </span>
-                            <span className="text-[9px] sm:text-[11px] uppercase tracking-[0.15em] sm:tracking-widest text-editorial-accent mt-1 font-bold truncate max-w-[120px] sm:max-w-none">
-                                Obstetrician & Gynaecologist
+                            <span className="text-[9px] sm:text-[11px] uppercase tracking-[0.15em] sm:tracking-widest text-editorial-accent mt-1 font-bold">
+                                Obstetrician and Gynaecologist
                             </span>
                         </div>
                     </a>
@@ -202,7 +202,7 @@ const Header = () => {
                              <div className="w-10 h-10 rounded-full bg-editorial-accent text-white flex items-center justify-center font-serif font-bold text-xl">K.</div>
                              <div className="flex flex-col">
                                 <span className="font-serif text-base sm:text-lg font-bold tracking-tight text-editorial-charcoal leading-none">Dr. K. Kanaga Lakshmi</span>
-                                <span className="text-[10px] uppercase tracking-widest text-editorial-accent mt-1 font-bold">Obstetrician & Gynaecologist</span>
+                                <span className="text-[10px] uppercase tracking-widest text-editorial-accent mt-1 font-bold">Obstetrician and Gynaecologist</span>
                              </div>
                         </div>
                         <button 

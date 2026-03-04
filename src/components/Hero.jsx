@@ -46,7 +46,7 @@ const Hero = () => {
             // Master timeline
             const tl = gsap.timeline({ 
                 defaults: { ease: 'elegant' },
-                delay: 0.3,
+                delay: 0.2,
                 onComplete: () => {
                     document.body.style.overflow = originalOverflow;
                     document.body.style.height = originalHeight;
@@ -65,7 +65,7 @@ const Hero = () => {
             // 1. Background pattern animation
             tl.fromTo(bgPatternRef.current,
                 { scale: 1.5, opacity: 0, rotation: 10 },
-                { scale: 1, opacity: 0.05, rotation: 0, duration: 2.5, ease: "power2.out" }
+                { scale: 1, opacity: 0.05, rotation: 0, duration: 1.5, ease: "power2.out" }
             )
             // 2. Image reveal with organic morph
             .fromTo(imageRef.current,
@@ -78,34 +78,34 @@ const Hero = () => {
                     scale: 1, 
                     opacity: 1,
                     borderRadius: '60% 40% 30% 70% / 40% 30% 70% 60%',
-                    duration: 2.2,
-                    ease: "elastic.out(1, 0.5)"
+                    duration: 1.4,
+                    ease: "elastic.out(1, 0.7)"
                 },
-                '-=2'
+                '-=1.2'
             )
             // 3. Floating elements staggered
             .to('.hero-floating', {
                 opacity: 1,
                 scale: 1,
-                stagger: 0.15,
-                duration: 1.2,
+                stagger: 0.1,
+                duration: 0.8,
                 ease: "back.out(1.2)"
-            }, '-=1')
+            }, '-=0.8')
             // 4. Content reveal
             .to('.hero-reveal', {
                 opacity: 1,
                 y: 0,
-                stagger: 0.1,
-                duration: 1.2,
+                stagger: 0.08,
+                duration: 0.8,
                 ease: "power3.out"
-            }, '-=0.8')
+            }, '-=0.6')
             // 5. Scroll indicator
             .to('.scroll-indicator', {
                 opacity: 1,
                 y: 0,
-                duration: 1,
+                duration: 0.6,
                 ease: "power2.out"
-            }, '-=0.5');
+            }, '-=0.4');
 
             // Continuous floating animation for image
             gsap.to(imageRef.current, {
@@ -244,8 +244,8 @@ const Hero = () => {
 
                     {/* Main Title */}
                     <h1 className="hero-title-main font-serif mb-8">
-                        <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl leading-tight text-editorial-charcoal tracking-tighter">
-                            Dr. K. Kanaga <span className="text-editorial-accent font-light">Lakshmi</span>
+                        <span className="block text-3xl sm:text-4xl md:text-5xl  xl:text-5.5xl leading-tight text-editorial-accent">
+                            Dr. K. Kanaga Lakshmi
                         </span>
                         <span className="block text-xl sm:text-2xl mt-4 text-editorial-charcoal/70 font-light">
                             Consultant at <span className="font-semibold text-editorial-charcoal">MGM Malar Hospital, Adyar</span>

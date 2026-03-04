@@ -34,17 +34,17 @@ const Contact = () => {
             gsap.fromTo('.contact-reveal', 
                 {
                     autoAlpha: 0,
-                    y: 40
+                    y: 30
                 },
                 {
                     autoAlpha: 1,
                     y: 0,
-                    stagger: 0.1,
-                    duration: 1.2,
-                    ease: 'power3.out',
+                    stagger: 0.08,
+                    duration: 1.0,
+                    ease: 'power2.out',
                     scrollTrigger: {
                         trigger: sectionRef.current,
-                        start: 'top 85%',
+                        start: 'top 90%',
                     },
                     immediateRender: false
                 }

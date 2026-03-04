@@ -32,18 +32,18 @@ const Experience = () => {
                 gsap.fromTo(card,
                     { 
                         autoAlpha: 0, 
-                        x: isEven ? -50 : 50,
-                        y: 20 
+                        x: isEven ? -40 : 40,
+                        y: 30 
                     },
                     {
                         autoAlpha: 1,
                         x: 0,
                         y: 0,
-                        duration: 1.2,
-                        ease: "expo.out",
+                        duration: 1.0,
+                        ease: "power2.out",
                         scrollTrigger: {
-                            trigger: card, // Changed from 'card' to 'containerRef.current' based on instruction interpretation
-                            start: 'top 85%', // Changed quotes
+                            trigger: card,
+                            start: 'top 90%',
                             toggleActions: 'play none none none'
                         }
                     }
@@ -53,14 +53,15 @@ const Experience = () => {
             // 3. Shadow Year Reveals
             gsap.utils.toArray('.shadow-year').forEach((year) => {
                 gsap.fromTo(year,
-                    { opacity: 0, scale: 0.8 },
+                    { opacity: 0, scale: 0.9 },
                     {
                         opacity: 0.03,
                         scale: 1,
-                        duration: 2,
+                        duration: 1.5,
+                        ease: 'power2.out',
                         scrollTrigger: {
-                            trigger: year, // Changed from 'year' to 'containerRef.current' based on instruction interpretation
-                            start: 'top 90%', // Changed quotes
+                            trigger: year,
+                            start: 'top 92%',
                             toggleActions: 'play none none none'
                         }
                     }
@@ -132,18 +133,18 @@ const Experience = () => {
             period: '2022 - 2024',
             title: 'Reproductive Care',
             role: 'Consultant',
-            institution: 'Iswarya Fertility Center',
+            institution: 'Reputed Center',
             desc: 'Focusing on advanced fertility treatments and helping families achieve their dreams through science.',
             type: 'Specialist'
         },
         {
-            year: '2023',
-            period: '2023',
-            title: 'Advanced Training',
-            role: 'Fellow in Reproductive Medicine',
+            year: '2022',
+            period: '2022 - 2025',
+            title: 'Fellowship in Reproductive Medicine',
+            role: 'Fellow',
             institution: 'Iswarya Fertility Center',
             desc: 'Deepening expertise in the intricate fields of reproductive technology and endocrinology.',
-            type: 'Research'
+            type: 'Academic'
         },
         {
             year: '2024',
@@ -153,15 +154,6 @@ const Experience = () => {
             institution: 'MGM Malar Hospital, Adyar',
             desc: 'Delivering world-class healthcare, leading complex gynaecological surgeries, high-risk obstetrics, and clinical management at a premier multi-specialty institution.',
             type: 'Current'
-        },
-        {
-            year: '2024',
-            period: '2024 - Present',
-            title: 'Fertility Excellence',
-            role: 'Consultant Fertility Specialist',
-            institution: 'Dr. Aravind’s IVF',
-            desc: 'Continuing the legacy of excellence as a lead specialist in fertility and advanced reproductive endocrinology.',
-            type: 'Specialist'
         }
     ];
 
