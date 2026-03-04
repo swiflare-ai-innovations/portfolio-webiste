@@ -130,27 +130,18 @@ const Experience = () => {
         },
         {
             year: '2022',
-            period: '2022 - 2024',
-            title: 'Reproductive Care',
-            role: 'Consultant',
-            institution: 'Reputed Center',
-            desc: 'Focusing on advanced fertility treatments and helping families achieve their dreams through science.',
-            type: 'Specialist'
-        },
-        {
-            year: '2022',
             period: '2022 - 2025',
-            title: 'Fellowship in Reproductive Medicine',
-            role: 'Fellow',
-            institution: 'Iswarya Fertility Center',
-            desc: 'Deepening expertise in the intricate fields of reproductive technology and endocrinology.',
-            type: 'Academic'
+            title: 'Reproductive Excellence',
+            role: 'Consultant & Fellow in Reproductive Medicine',
+            institution: 'Reputed Center | Iswarya Fertility Center',
+            desc: 'Integrating clinical consultancy with advanced fellowship training, focusing on assisted reproductive technology and endocrinology to help families achieve their dreams through science.',
+            type: 'Specialist'
         },
         {
             year: '2024',
             period: '2024 - Present',
             title: 'Clinical Leadership',
-            role: 'Consultant Obstetrician & Gynaecologist',
+            role: 'Consultant Obstetrician, Gynaecologist & Fertility Specialist',
             institution: 'MGM Malar Hospital, Adyar',
             desc: 'Delivering world-class healthcare, leading complex gynaecological surgeries, high-risk obstetrics, and clinical management at a premier multi-specialty institution.',
             type: 'Current'

@@ -33,9 +33,15 @@ const About = () => {
     <section 
       ref={sectionRef} 
       id="about" 
-      className="relative py-16 sm:py-20 md:py-28 bg-editorial-silk overflow-hidden flex items-center justify-center"
+      className="relative py-16 sm:py-20 md:py-28 bg-editorial-bg overflow-hidden flex items-center justify-center"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
+      {/* Continuity Grid Overlay */}
+      <div className="absolute inset-0 opacity-[0.03] text-editorial-charcoal pointer-events-none z-0" style={{
+          backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)',
+          backgroundSize: '60px 60px'
+      }}></div>
+
+      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           
           {/* Left Column: Sticky Title & Quote */}
@@ -59,32 +65,7 @@ const About = () => {
               </p>
             </div>
 
-            {/* Expertise Pillbox Grid (Moved to Left Side) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-8">
-              {/* Card 1 */}
-              <div className="about-reveal bg-white p-5 border border-editorial-border/40 space-y-2 rounded-2xl shadow-sm transition-all hover:-translate-y-1 hover:shadow-md">
-                <span className="text-[8px] font-bold tracking-[0.2em] text-editorial-subtext/50 uppercase block">01 / Specialization</span>
-                <p className="font-serif text-base text-editorial-text leading-tight">Fertility Expert</p>
-              </div>
-              
-              {/* Card 2 */}
-              <div className="about-reveal bg-white p-5 border border-editorial-border/40 space-y-2 rounded-2xl shadow-sm transition-all hover:-translate-y-1 hover:shadow-md">
-                <span className="text-[8px] font-bold tracking-[0.2em] text-editorial-subtext/50 uppercase block">02 / Focus Area</span>
-                <p className="font-serif text-base text-editorial-text leading-tight">High Risk Obstetrics</p>
-              </div>
-              
-              {/* Card 3 */}
-              <div className="about-reveal bg-white p-5 border border-editorial-border/40 space-y-2 rounded-2xl shadow-sm transition-all hover:-translate-y-1 hover:shadow-md">
-                <span className="text-[8px] font-bold tracking-[0.2em] text-editorial-subtext/50 uppercase block">03 / Advanced Surgery</span>
-                <p className="font-serif text-base text-editorial-text leading-tight">Laparoscopic and Robotic Arts</p>
-              </div>
-              
-              {/* Card 4 */}
-              <div className="about-reveal bg-white p-5 border border-editorial-border/40 space-y-2 rounded-2xl shadow-sm transition-all hover:-translate-y-1 hover:shadow-md">
-                <span className="text-[8px] font-bold tracking-[0.2em] text-editorial-subtext/50 uppercase block">04 / Academic Focus</span>
-                <p className="font-serif text-base text-editorial-text leading-tight">Teaching & Research</p>
-              </div>
-            </div>
+            {/* Expertise Pillbox Grid removed */}
           </div>
 
           {/* Right Column: Long Content & Expertise Cards */}
@@ -117,11 +98,21 @@ const About = () => {
                 With specialised training in fertility, Dr. Kanaga has performed more than <strong>1,000 fertility procedures</strong>. She is deeply experienced in fertility evaluation, counselling, sexual health concerns, as well as recurrent pregnancy loss, PCOD or PCOS management, endometriosis, and recurrent implantation failure.
               </p>
               
-              <div className="p-8 bg-editorial-accent/5 border border-editorial-accent/20 rounded-2xl italic font-serif text-center mt-12 mb-4">
-                "Her clinical excellence has been recognised at the highest levels, including an Appreciation Award from the Honourable Chief Minister, a Best Doctor Award at Thiruvarur Medical College and recognition during the Gaja cyclone."
-              </div>
-
             </div>
+          </div>
+        </div>
+
+        {/* Full-width Recognition Block */}
+        <div className="about-reveal mt-16 sm:mt-24">
+          <div className="p-8 md:p-12 bg-editorial-accent/5 border border-editorial-accent/20 rounded-3xl italic font-serif text-center relative overflow-hidden group hover:bg-editorial-accent/10 transition-colors duration-700">
+            {/* Decorative quotation mark */}
+            <span className="absolute top-4 left-8 text-6xl text-editorial-accent/20 font-serif leading-none select-none">"</span>
+            
+            <p className="text-xl md:text-2xl lg:text-3xl text-editorial-text leading-relaxed max-w-5xl mx-auto">
+              Her clinical excellence has been recognised at the highest levels, including an Appreciation Award from the Honourable Chief Minister, a Best Doctor Award at Thiruvarur Medical College and recognition during the Gaja cyclone.
+            </p>
+
+            <span className="absolute bottom-4 right-8 text-6xl text-editorial-accent/20 font-serif leading-none select-none rotate-180">"</span>
           </div>
         </div>
       </div>

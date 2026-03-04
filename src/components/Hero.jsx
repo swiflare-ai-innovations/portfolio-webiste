@@ -208,7 +208,7 @@ const Hero = () => {
         <section 
             ref={containerRef} 
             id="home" 
-            className="relative w-full bg-editorial-beige overflow-hidden flex flex-col justify-center min-h-screen"
+            className="relative w-full bg-editorial-bg overflow-hidden flex flex-col justify-center min-h-screen"
         >
             {/* 1. Abstract Background Pattern */}
             <div 
@@ -248,7 +248,7 @@ const Hero = () => {
                             Dr. K. Kanaga Lakshmi
                         </span>
                         <span className="block text-xl sm:text-2xl mt-4 text-editorial-charcoal/70 font-light">
-                            Consultant at <span className="font-semibold text-editorial-charcoal">MGM Malar Hospital, Adyar</span>
+                            Consultant Obstetrician, Gynaecologist & <span className="font-semibold text-editorial-charcoal">Fertility Specialist</span>
                         </span>
                     </h1>
 
@@ -270,7 +270,7 @@ const Hero = () => {
                             <span className="text-[9px] font-bold tracking-widest uppercase text-editorial-subtext mt-1 block">Deliveries</span>
                         </div>
                         <div className="col-span-2 sm:col-span-1 bg-editorial-accent/10 p-6 rounded-2xl border border-editorial-accent/20">
-                            <span className="block font-serif text-lg font-bold text-editorial-accent leading-tight">MS OG · MRCOG</span>
+                            <span className="block font-serif text-lg font-bold text-editorial-accent leading-tight">MS OG · MRCOG (UK)</span>
                             <span className="text-[9px] font-bold tracking-widest uppercase text-editorial-subtext mt-1 block">Clinical Excellence</span>
                         </div>
                     </div>

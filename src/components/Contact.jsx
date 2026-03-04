@@ -181,11 +181,7 @@ const Contact = () => {
                                         Gandhi Nagar, Adyar,<br />
                                         Chennai - 600020
                                     </address>
-                                    <address className="not-italic font-serif text-xl text-editorial-subtext leading-relaxed border-l-2 border-editorial-accent/30 pl-8">
-                                        <span className="block text-editorial-text font-medium text-sm mb-2 opacity-60 uppercase tracking-wider">Dr. Aravind's IVF</span>
-                                        Lakshmi Apartments,<br />
-                                        Kasthuribai Nagar, Adyar
-                                    </address>
+                                   
                                 </div>
 
                                 <div className="pt-8 flex items-center gap-4">
