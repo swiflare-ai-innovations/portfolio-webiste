@@ -131,98 +131,108 @@ const Expertise = () => {
         }
     }, [activeTab]);
 
-    const domainExpertise = [
-        { 
-            title: "High Risk Obstetrics", 
-            description: [
-                "Comprehensive clinical management of pregnancies complicated by maternal medical conditions, fetal challenges, or multi-organ systemic disorders. We utilize cutting-edge maternal-fetal monitoring systems and evidence-based critical care protocols to navigate high-stakes clinical scenarios.",
-                "Our practice is characterized by a multidisciplinary approach, integrating advanced hemodynamics, critical care obstetrics, and specialized neonatology coordination. We specialize in the stabilization and delivery of patients with complex hypertensive disorders, gestational metabolic crises, and pre-existing cardiac or renal complications.",
-                "Beyond clinical interventions, we focus on the longitudinal physiological optimization of the mother, ensuring that every milestone—from early gestative screening to postpartum recovery—is managed with maximum clinical rigor and surgical preparedness."
-            ],
-            specialties: [
-                "Recurrent Pregnancy Loss Workup", "Severe Pre-eclampsia & PIH Management", "Gestational Diabetes & Metabolic Control", 
-                "VBAC (Vaginal Birth After Caesarean)", "Multiple Gestations (Twins/Triplets)", "Pre-term Labor & Emergency Cerclage",
-                "Fetal Growth Restriction (IUGR) Monitoring", "Placenta Previa & Accreta Spectrum (PAS)", "Medical Disorders in Pregnancy (Cardiac/Renal)", 
-                "Emergency Obstetric Interventions", "Postpartum Hemorrhage (PPH) Protocols", "Critical Care Obstetric Management",
-                "Fetal Doppler & Biophysical Profiles", "Early Gestation Risk Stratification", "Obstetric Sepsis Management",
-                "Instrumental Deliveries (Vacuum/Forceps)", "Breech & Transverse Version (ECV)", "Intrapartum Fetal Resuscitation"
-            ],
-            icon: Icons.Health,
-            ref: "OB-01"
-        },
-        { 
-            title: "Gynaeoncology", 
-            description: [
-                "Advanced diagnostic pathways and surgical strategies for the prevention, early detection, and comprehensive management of gynaecological cancers. We emphasize a 'prevention-first' philosophy utilizing high-resolution screening and precision biopsy methodologies.",
-                "Our oncological practice covers the entire spectrum of premalignant and malignant conditions of the female reproductive tract. This includes the management of adnexal masses, cervical dysplasia, and endometrial hyperplasias within a strictly regulated clinical framework.",
-                "We coordinate closely with pathology and radiology departments to ensure accurate staging and optimal surgical clearance, prioritizing the preservation of quality of life and future fertility wherever clinically viable through nerve-sparing and tissue-saving techniques."
-            ],
-            specialties: [
-                "Cervical & Ovarian Cancer Screening", "Colposcopy & Directed Biopsy", "LEEP/LLETZ (Loop Electrosurgical Excision)", 
-                "Malignancy Risk Assessment (RMI-4)", "Post-Oncological Surgical Care Plans", "Preventive HPV Vaccination Literacy", 
-                "Endometrial Biopsy & Pipelle Sampling", "Management of Complex Adnexal Masses", "Vulvar & Vaginal Health Screening", 
-                "Premalignant Lesion Monitoring (CIN/VIN)", "Hereditary Cancer Risk Counselling (BRCA)", "Post-Menopausal Bleeding Evaluation",
-                "Tumor Marker Analysis (CA-125/HE4)", "Pelvic Lymphadenectomy Concepts", "Staging Laparotomy for Malignancy",
-                "Hysteroscopic Directed Sampling", "Onco-fertility Advocacy", "Multidisciplinary Tumor Board Prep"
-            ],
-            icon: Icons.DNA,
-            ref: "ON-02" 
-        },
-        { 
-            title: "Reproductive Medicine", 
-            description: [
-                "Evidence-led management of infertility through integrated diagnostic workups and clinical reproductive technology. We focus on optimizing the physiological environment for successful conception by addressing both hormonal and structural hurdles.",
-                "Our approach to fertility is deeply personalized, ranging from metabolic optimization and ovulation induction to advanced assisted reproductive techniques (ART). We utilize refined endocrinology protocols to manage complex cases of recurrent implantation failure and polycystic ovarian syndrome.",
-                "Specialized focus is placed on the psychological and metabolic aspects of the fertility journey, ensuring that patients receive inclusive care including psychosexual counselling and long-term endocrine support to maintain reproductive health beyond the conception phase."
-            ],
-            specialties: [
-                "Comprehensive Primary Infertility Workup", "PCOS & PCOD Metabolic Syndromes", "IUI (Intrauterine Insemination)", 
-                "Controlled Ovarian Hyperstimulation", "Recurrent Implantation Failure (RIF)", "Endometriosis & Fertility Mapping", 
-                "Sexual Health & Psychosexual Counselling", "Hormonal Optimization & HRT", "Tubal Patency Testing (HSG/HyCoSy)", 
-                "Male Factor Infertility Initial Screening", "Follicular Monitoring & TVS Tracking", "Luteal Phase Support Management",
-                "Recurrent Pregnancy Loss Analysis", "Basal Body Temperature & Cycle Tracking", "Assisted Hatching Consultation",
-                "Uterine Receptivity Assessment", "Endocrine Imbalance Corrections", "Donor Program Coordination"
-            ],
-            icon: Icons.Cell,
-            ref: "RM-03" 
-        },
-        { 
-            title: "Laparoscopic and Robotic Arts", 
-            description: [
-                "Pioneering minimally invasive surgical techniques designed to minimize physical trauma and accelerate clinical recovery. We utilize high-definition 4K visualization and precision instrumentation for the most complex pelvic surgeries.",
-                "Our surgical commitment extends to the treatement of benign gynaecological conditions such as large fibroids, complex cysts, and stage IV endometriosis through laparoscopic and hysteroscopic routes, ensuring minimal scarring and superior aesthetic outcomes.",
-                "By prioritizing tissue preservation and precision resection, we enable patients to return to their functional lives faster with reduced postoperative pain and lower risk of long-term complications compared to traditional open surgery."
-            ],
-            specialties: [
-                "Laparoscopic Myomectomy (Fibroid Removal)", "Total Laparoscopic Hysterectomy (TLH)", "Diagnostic & Operative Hysteroscopy", 
-                "Laparoscopic Ovarian Cystectomy", "Endometriosis Ablation & Excision", "Robotic-Assisted Surgical Protocols",
-                "Laparoscopic Salpingectomy for Ectopic", "Adhesiolysis & Pelvic Reconstruction", "Hysteroscopic Septal Resection", 
-                "Polypectomy & Submucous Myoma Removal", "Minimally Invasive Fertility Surgery", "Suturing & Knotting Proficiency",
-                "Single Incision Laparoscopy (SILS)", "Advanced Energy Source Management", "Post-Surgical Recovery Optimization",
-                "Hysteroscopic Cannulation (Tubal)", "Laparoscopic Sacrocolpopexy", "Urogynae Procedures (TOT/TVT)"
-            ],
-            icon: Icons.Shield,
-            ref: "LS-04" 
-        },
-        { 
-            title: "Social Obstetrics", 
-            description: [
-                "Bridging institutional clinical excellence with community-focused health advocacy and preventive education. We address the unique physiological and psychological needs of women across different life stages through dedicated outreach.",
-                "Our public health initiatives focus on adolescent transitions, nutritional fortification, and maternal mental wellbeing, aiming to empower women with medical literacy to navigate their health journeys with confidence in diverse community settings.",
-                "We lead comprehensive awareness programs on cervical cancer prevention, breastfeeding support, and geriatric gynaecology, ensuring that women from all socio-economic profiles have access to high-quality medical guidance and preventive screening."
-            ],
-            specialties: [
-                "Adolescent Health & Puberty Management", "Menopause & Geriatric Care Protocols", "Maternal Nutrition & Micronutrition", 
-                "Community Health Awareness Campaigns", "Postpartum Mental Health Screening", "Lactation Counselling & Support",
-                "Contraception & Family Planning Advocacy", "Preventive Screening Health Literacy", "Perinatal Wellness Workshops", 
-                "Adolescent PCOS & Acne Management", "Geriatric Gynaecology Outreach", "Inclusive Healthcare Advocacy",
-                "Domestic Violence Awareness & Support", "Antenatal Education & Breast Prep", "Public Health Research Initiatives",
-                "Nutritional Anemia Correction Programs", "Bone Health & Osteoporosis Screening", "Emotional Resilience Training"
-            ],
-            icon: Icons.Health,
-            ref: "SO-05" 
-        }
-    ];
+const domainExpertise = [
+    { 
+        title: "High Risk Obstetrics", 
+        description: [
+            "Providing specialized, evidence-based care for pregnancies requiring closer monitoring and advanced medical support, ensuring the safety of both mother and baby. Our practice integrates cutting-edge maternal-fetal monitoring systems and critical care protocols for high-stakes clinical scenarios.",
+            "We coordinate closely with physicians, diabetologists, cardiologists, and neonatologists to deliver comprehensive multidisciplinary care. Our approach emphasizes early risk identification and individualized care plans for pregnancies complicated by maternal medical conditions, fetal challenges, or multi-organ systemic disorders.",
+            "Beyond clinical interventions, we focus on longitudinal physiological optimization of the mother, ensuring every milestone—from early gestative screening to postpartum recovery—is managed with maximum clinical rigor and surgical preparedness."
+        ],
+        specialties: [
+            "Preconception counseling for medical disorders", "Early risk stratification in pregnancy", "Individualized high-risk care plans",
+            "Gestational diabetes & pre-existing diabetes", "Hypertensive disorders (PIH, preeclampsia)", "Thyroid disorders in pregnancy",
+            "Anemia management", "Cardiac disorders in pregnancy", "Renal and autoimmune conditions",
+            "Epilepsy & chronic medical illnesses", "Intrauterine growth restriction (IUGR)", "Oligohydramnios / Polyhydramnios management",
+            "Abnormal Doppler studies", "Placenta previa & placental abruption", "Multiple pregnancy management",
+            "Fetal surveillance (growth scans, NST, CTG)", "Preterm labour management", "Cervical insufficiency & cerclage",
+            "Recurrent pregnancy loss care", "Previous LSCS & VBAC counseling", "Previous stillbirth / adverse obstetric history",
+            "Rh-negative pregnancy care", "Coordination with multidisciplinary specialists"
+        ],
+        icon: Icons.Health,
+        ref: "HRO-01"
+    },
+    { 
+        title: "Gynaeoncology", 
+        description: [
+            "Advanced diagnostic pathways and surgical strategies for the prevention, early detection, and comprehensive management of gynaecological cancers. We emphasize a 'prevention-first' philosophy utilizing high-resolution screening and precision biopsy methodologies.",
+            "Our oncological practice covers the entire spectrum of premalignant and malignant conditions of the female reproductive tract. This includes the management of adnexal masses, cervical dysplasia, and endometrial hyperplasias within a strictly regulated clinical framework.",
+            "We coordinate closely with pathology and radiology departments to ensure accurate staging and optimal surgical clearance, prioritizing the preservation of quality of life and future fertility wherever clinically viable through nerve-sparing and tissue-saving techniques."
+        ],
+        specialties: [
+            "Cervical & Ovarian Cancer Screening", "Colposcopy & Directed Biopsy", "LEEP/LLETZ (Loop Electrosurgical Excision)", 
+            "Malignancy Risk Assessment (RMI-4)", "Post-Oncological Surgical Care Plans", "Preventive HPV Vaccination Literacy", 
+            "Endometrial Biopsy & Pipelle Sampling", "Management of Complex Adnexal Masses", "Vulvar & Vaginal Health Screening", 
+            "Premalignant Lesion Monitoring (CIN/VIN)", "Hereditary Cancer Risk Counselling (BRCA)", "Post-Menopausal Bleeding Evaluation",
+            "Tumor Marker Analysis (CA-125/HE4)", "Pelvic Lymphadenectomy Concepts", "Staging Laparotomy for Malignancy",
+            "Hysteroscopic Directed Sampling", "Onco-fertility Advocacy", "Multidisciplinary Tumor Board Prep"
+        ],
+        icon: Icons.DNA,
+        ref: "GON-02" 
+    },
+    { 
+        title: "Reproductive Medicine", 
+        description: [
+            "Comprehensive evaluation and management of infertility with a patient-centered, ethical, and evidence-based approach — supporting couples through every step of their fertility journey. Our focus is on personalized treatment, clear counseling, and compassionate support.",
+            "We emphasize optimizing the physiological environment for successful conception by addressing both hormonal and structural hurdles. From metabolic optimization and ovulation induction to advanced assisted reproductive techniques (ART), our refined endocrinology protocols manage complex cases of recurrent implantation failure and polycystic ovarian syndrome.",
+            "Specialized focus is placed on the psychological and metabolic aspects of the fertility journey, ensuring patients receive inclusive care including psychosexual counselling and long-term endocrine support to maintain reproductive health beyond the conception phase."
+        ],
+        specialties: [
+            "Detailed fertility assessment (both partners)", "Preconception counseling & lifestyle guidance", "Ovulation assessment & cycle tracking",
+            "Hormonal evaluation (AMH, thyroid, prolactin)", "Semen analysis interpretation", "Ultrasound follicular monitoring",
+            "Tubal patency assessment (HSG/SSG guidance)", "Ovulation induction protocols", "Timed intercourse guidance",
+            "Luteal phase support", "Intrauterine Insemination (IUI)", "Controlled ovarian stimulation protocols",
+            "IVF/ICSI referral & coordination", "PCOS & PCOD management", "Endometriosis & fertility mapping",
+            "Unexplained infertility care", "Diminished ovarian reserve management", "Male factor infertility coordination",
+            "Recurrent implantation failure evaluation", "Recurrent pregnancy loss workup", "Hormonal & autoimmune evaluation",
+            "Stress management & nutritional counseling", "Early pregnancy monitoring support"
+        ],
+        icon: Icons.Cell,
+        ref: "RM-03" 
+    },
+    { 
+        title: "Laparoscopic and Robotic Arts", 
+        description: [
+            "Offering advanced minimally invasive and robotic-assisted surgical solutions for gynecological conditions, ensuring precision, faster recovery, reduced pain, and improved patient outcomes. We utilize high-definition 4K visualization and precision instrumentation for the most complex pelvic surgeries.",
+            "Our surgical commitment extends to the treatment of benign gynaecological conditions such as large fibroids, complex cysts, and stage IV endometriosis through laparoscopic, hysteroscopic, and robotic-assisted routes. These approaches ensure minimal scarring, reduced postoperative pain, and superior aesthetic outcomes.",
+            "By prioritizing tissue preservation and precision resection, we enable patients to return to their functional lives faster with shorter hospital stays and lower risk of long-term complications compared to traditional open surgery."
+        ],
+        specialties: [
+            "Diagnostic laparoscopy (infertility/pelvic pain)", "Laparoscopic ovarian cystectomy", "Laparoscopic endometriosis management",
+            "Laparoscopic myomectomy", "Laparoscopic ectopic pregnancy treatment", "Adhesiolysis",
+            "Tubal surgeries", "Total Laparoscopic Hysterectomy (TLH)", "Laparoscopic Assisted Vaginal Hysterectomy (LAVH)",
+            "Subtotal (supracervical) hysterectomy", "Robotic-assisted myomectomy", "Robotic-assisted hysterectomy",
+            "Robotic excision of deep endometriosis", "Complex pelvic adhesiolysis", "Fertility-preserving surgeries",
+            "Advanced suturing & reconstructive procedures", "Laparoscopic endometriosis excision", "Ovarian drilling (PCOS cases)",
+            "Management of complex adnexal masses", "Laparoscopic sacrocolpopexy", "Vault prolapse repair",
+            "Pelvic reconstructive surgeries"
+        ],
+        icon: Icons.Shield,
+        ref: "MIS-04" 
+    },
+    { 
+        title: "General Gynaecology & Wellness", 
+        description: [
+            "Comprehensive women's healthcare services across adolescence, reproductive years, and menopause, with a focus on preventive care, early diagnosis, and evidence-based management. Every stage of a woman's life brings unique challenges that require respectful communication and individualized treatment planning.",
+            "Our practice emphasizes long-term wellness through preventive screening, lifestyle counseling, and early intervention. We address the full spectrum of gynaecological concerns—from menstrual irregularities and benign disorders to midlife transitions—ensuring women feel heard, supported, and empowered in their healthcare decisions.",
+            "We lead comprehensive awareness programs on cervical cancer prevention, breastfeeding support, and geriatric gynaecology, ensuring that women from all backgrounds have access to high-quality medical guidance and preventive screening."
+        ],
+        specialties: [
+            "Routine gynecological consultations", "Menstrual irregularity evaluation", "Abnormal uterine bleeding management",
+            "Dysmenorrhea & chronic pelvic pain", "Vaginal discharge & infection treatment", "Pap smear & cervical cancer screening",
+            "Puberty-related concerns", "PCOS evaluation & management", "Acne, hirsutism & metabolic counseling",
+            "Contraception counseling (OCPs, IUCD, injectables)", "Pre-marital & preconception counseling", "Fibroid uterus management",
+            "Ovarian cyst evaluation & treatment", "Endometriosis & adenomyosis care", "Pelvic inflammatory disease treatment",
+            "Diagnostic & therapeutic D&C", "Hysteroscopy procedures", "Myomectomy & ovarian cystectomy",
+            "Total abdominal / vaginal hysterectomy", "Ectopic pregnancy management", "Perimenopausal counseling",
+            "Hormone replacement therapy guidance", "Osteoporosis screening & prevention", "Vasomotor symptom management",
+            "Urogenital atrophy treatment", "Cervical & breast cancer screening guidance", "HPV vaccination counseling",
+            "Lifestyle & metabolic health counseling", "Weight management advice"
+        ],
+        icon: Icons.Globe,
+        ref: "WHS-05" 
+    }
+];
 
     return (
         <section ref={sectionRef} id="expertise" className="py-24 md:py-32 bg-editorial-silk relative isolate">
