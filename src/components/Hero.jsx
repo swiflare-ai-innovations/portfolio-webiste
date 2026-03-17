@@ -248,7 +248,7 @@ const Hero = () => {
                             Dr. K. Kanaga Lakshmi
                         </span>
                         <span className="block text-xl sm:text-2xl mt-4 text-editorial-charcoal/70 font-light">
-                            Consultant Obstetrician, Gynaecologist & <span className="font-semibold text-editorial-charcoal">Fertility Specialist</span>
+                            Consultant Obstetrician, Gynaecologist & Fertility Specialist
                         </span>
                     </h1>
 
