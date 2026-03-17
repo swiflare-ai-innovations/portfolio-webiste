@@ -33,7 +33,7 @@ const About = () => {
     <section 
       ref={sectionRef} 
       id="about" 
-      className="relative py-16 sm:py-20 md:py-28 bg-editorial-bg overflow-hidden flex items-center justify-center"
+      className="relative py-12 md:py-20 bg-editorial-bg overflow-hidden flex items-center justify-center"
     >
       {/* Continuity Grid Overlay */}
       <div className="absolute inset-0 opacity-[0.03] text-editorial-charcoal pointer-events-none z-0" style={{
@@ -48,12 +48,12 @@ const About = () => {
           <div className="lg:col-span-5 lg:sticky lg:top-32 space-y-8 lg:space-y-12 order-1">
             <div className="about-reveal inline-flex items-center gap-3 px-4 py-1.5 bg-editorial-accent/10 border border-editorial-accent/20 rounded-full">
               <span className="w-1.5 h-1.5 rounded-full bg-editorial-accent animate-pulse"></span>
-              <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-editorial-subtext">
+              <span className="text-xs md:text-[10px] font-bold tracking-[0.3em] uppercase text-editorial-subtext">
                 Behind the Practice
               </span>
             </div>
             
-            <h2 className="about-reveal font-serif text-5xl sm:text-6xl md:text-7xl leading-[1.05] text-editorial-text tracking-tighter">
+            <h2 className="about-reveal font-serif text-3xl sm:text-5xl md:text-7xl leading-[1.05] text-editorial-text tracking-tighter w-full mb-4 md:mb-12">
               Pioneering <br className="hidden lg:block"/>
               <span className="text-editorial-accent">Excellence</span> <br className="hidden lg:block"/>
               in Women's Health
@@ -79,12 +79,12 @@ const About = () => {
             </div>
 
             {/* Main Long-form Text */}
-            <div className="about-reveal text-editorial-subtext text-lg md:text-xl leading-[1.8] font-light space-y-8 opacity-90">
-              <p className="first-letter:text-6xl first-letter:font-serif first-letter:text-editorial-accent first-letter:mr-3 first-letter:float-left">
+            <div className="about-reveal text-editorial-text text-lg md:text-xl text-justify leading-[1.8] font-normal space-y-4">
+              <p>
                 Dr. Kanaga Lakshmi Kapilraj MBBS MS (OG) MRCOG is an accomplished Obstetrician, Gynaecologist, Fertility Specialist and Laparoscopic Surgeon dedicated to advancing women's health through compassionate care, surgical excellence and evidence based practice. With a strong academic foundation and advanced fellowship training in fertility and assisted reproductive technology, she has guided thousands of women through their reproductive journeys from adolescence and fertility challenges to pregnancy, childbirth, menopause and beyond.
               </p>
               
-              <div className="h-px w-24 bg-editorial-accent/30 my-8"></div>
+              <div className="h-px w-24 bg-editorial-accent/30 my-5"></div>
 
               <p>
                 She has performed nearly <strong className="font-normal text-editorial-text border-b border-editorial-accent/30 pb-0.5">15,000 deliveries</strong>, including a high proportion of high risk cases, vaginal births after caesarean (VBAC), successful deliveries following external cephalic version for breech and a remarkable range of assisted deliveries. Her calm clinical judgement, patient centred counselling and commitment to safe obstetric care have made her a trusted physician among families across generations.

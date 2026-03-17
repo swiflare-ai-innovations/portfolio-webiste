@@ -52,7 +52,7 @@ const Appointment = () => {
     };
 
     return (
-        <section ref={sectionRef} id="appointment" className="relative py-16 sm:py-20 md:py-24 lg:py-28 bg-white overflow-hidden isolate">
+        <section ref={sectionRef} id="appointment" className="relative py-12 md:py-16 lg:py-20 bg-editorial-bg overflow-hidden isolate">
             
             {/* Background Narrative */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none select-none z-0">
@@ -64,12 +64,12 @@ const Appointment = () => {
             <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
                 
                 {/* Header Block */}
-                <div className="mb-20 space-y-6">
-                    <div className="appointment-reveal inline-flex items-center gap-2 px-3 py-1 bg-editorial-accent/10 border border-editorial-accent/20 rounded-full">
+                <div className="mb-10 md:mb-20 space-y-4 md:space-y-6">
+                    <div className="appointment-reveal inline-flex items-center gap-2 px-3 py-1.5 bg-editorial-accent/10 border border-editorial-accent/20 rounded-full mb-2 md:mb-4">
                         <span className="w-1.5 h-1.5 rounded-full bg-editorial-accent"></span>
-                        <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-editorial-subtext">Booking</span>
+                        <span className="text-[11px] md:text-[10px] font-bold tracking-[0.4em] uppercase text-editorial-subtext">Booking</span>
                     </div>
-                    <h2 className="appointment-reveal font-serif text-6xl md:text-6xl lg:text-6xl text-editorial-text tracking-tighter leading-[0.85]">
+                    <h2 className="appointment-reveal font-serif text-3xl md:text-6xl lg:text-6xl text-editorial-text tracking-tighter leading-[0.85] w-full">
                         Request Your <br />
                         <span className="text-editorial-accent ml-[5%]">Consultation</span>
                     </h2>
@@ -78,7 +78,7 @@ const Appointment = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
                     
                     {/* Left: The Protocol (Clinic Info) */}
-                    <div className="lg:col-span-4 space-y-12">
+                    <div className="lg:col-span-4 space-y-12 order-2 lg:order-1">
                         <div className="appointment-reveal space-y-4" style={{ opacity: 0, visibility: 'hidden' }}>
                             <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-editorial-accent">The Protocol</p>
                             <h3 className="font-serif text-3xl text-editorial-text leading-tight">Professional Triage & Coordination</h3>
@@ -89,13 +89,13 @@ const Appointment = () => {
 
                         <div className="appointment-reveal pt-8 border-t border-editorial-border/60 space-y-8" style={{ opacity: 0, visibility: 'hidden' }}>
                             <div className="space-y-2">
-                                <p className="text-[9px] uppercase tracking-widest opacity-40">Primary Hospital</p>
+                                <p className="text-xs md:text-[9px] uppercase tracking-widest text-editorial-text">Primary Hospital</p>
                                 <p className="font-serif text-xl">MGM Malar Hospital, Adyar</p>
                                 <p className="text-xs text-editorial-subtext/60 max-w-[200px]">Old No. 52 New No. 111, 1 st Main Road, Gandhi Nagar, Chennai - 600020</p>
                             </div>
                             
                             <div className="space-y-1">
-                                <p className="text-[9px] uppercase tracking-widest opacity-40">Direct Contact</p>
+                                <p className="text-xs md:text-[9px] uppercase tracking-widest text-editorial-text">Direct Contact</p>
                                 <a href="tel:+918344795191" className="block font-serif text-2xl text-editorial-text hover:text-editorial-accent transition-colors">
                                     +91 83447 95191
                                 </a>
@@ -110,7 +110,7 @@ const Appointment = () => {
                     </div>
 
                     {/* Right: The Intake Form */}
-                    <div className="lg:col-span-8 bg-white/60 p-8 md:p-12 border border-editorial-border/40 backdrop-blur-xl rounded-3xl appointment-reveal" style={{ opacity: 0, visibility: 'hidden' }}>
+                    <div className="lg:col-span-8 bg-white/60 p-8 md:p-12 border border-editorial-border/40 backdrop-blur-xl rounded-3xl appointment-reveal order-1 lg:order-2" style={{ opacity: 0, visibility: 'hidden' }}>
                         <form ref={formRef} onSubmit={handleSubmit} className="space-y-10">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                                 {/* Name Input */}
@@ -197,8 +197,8 @@ const Appointment = () => {
                 </div>
 
                 {/* Footnote */}
-                <div className="appointment-reveal mt-24 text-center opacity-30" style={{ opacity: 0, visibility: 'hidden' }}>
-                    <p className="text-[9px] font-mono tracking-widest uppercase">
+                <div className="appointment-reveal mt-24 text-center opacity-60" style={{ opacity: 0, visibility: 'hidden' }}>
+                    <p className="text-[11px] md:text-[9px] font-mono tracking-widest uppercase text-editorial-text">
                         All clinical data is handled with maximum privacy standards • 2026 Registry_KL
                     </p>
                 </div>

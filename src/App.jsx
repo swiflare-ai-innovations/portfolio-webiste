@@ -10,6 +10,7 @@ import Expertise from './components/Expertise';
 import Contact from './components/Contact';
 import Header from './components/Header';
 import Appointment from './components/Appointment';
+import Testimonials from './components/Testimonials';
 import ThemeSwitcher from './components/ThemeSwitcher';
 
 const App = () => {
@@ -75,6 +76,7 @@ const App = () => {
             <About />
             <Experience />
             <Expertise />
+            <Testimonials />
             <Appointment />
             <Contact />
         </main>

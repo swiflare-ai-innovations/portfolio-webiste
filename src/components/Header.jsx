@@ -95,6 +95,7 @@ const Header = () => {
         { name: 'About', href: '#about' },
         { name: 'Timeline', href: '#experience' },
         { name: 'Expertise', href: '#expertise' },
+        { name: 'Testimonials', href: '#testimonials' },
         { name: 'Contact', href: '#contact' }
     ];
 
@@ -126,9 +127,7 @@ const Header = () => {
                             <span className={`font-serif text-sm sm:text-base md:text-xl font-bold tracking-tight leading-none text-editorial-charcoal whitespace-nowrap`}>
                                 Dr. K. Kanaga Lakshmi
                             </span>
-                            <span className="text-[9px] sm:text-[11px] uppercase tracking-[0.15em] sm:tracking-widest text-editorial-accent mt-1 font-bold">
-                                Obstetrician and Gynaecologist
-                            </span>
+
                         </div>
                     </a>
 

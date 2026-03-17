@@ -235,16 +235,15 @@ const domainExpertise = [
 ];
 
     return (
-        <section ref={sectionRef} id="expertise" className="py-24 md:py-32 bg-editorial-silk relative isolate">
+        <section ref={sectionRef} id="expertise" className="py-12 md:py-20 bg-editorial-bg relative isolate">
             <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
                 
-                {/* Section Header */}
-                <div className="expertise-header mb-20">
-                    <div className="header-tag inline-flex items-center gap-2 px-3 py-1 bg-editorial-accent/10 border border-editorial-accent/20 rounded-full mb-6">
+                <div className="expertise-header mb-8 md:mb-20 w-full text-left">
+                    <div className="header-tag inline-flex items-center gap-2 px-3 py-1.5 bg-editorial-accent/10 border border-editorial-accent/20 rounded-full mb-4 md:mb-6">
                         <span className="w-1.5 h-1.5 rounded-full bg-editorial-accent"></span>
-                        <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-editorial-subtext">Scope of Practice</span>
+                        <span className="text-xs md:text-[10px] font-bold tracking-[0.3em] uppercase text-editorial-subtext">Scope of Practice</span>
                     </div>
-                    <h2 className="header-title font-serif text-5xl md:text-7xl text-editorial-text tracking-tight leading-[1.1] max-w-3xl">
+                    <h2 className="header-title font-serif text-3xl md:text-7xl text-editorial-text tracking-tight leading-[1.1] w-full">
                         Expertise Built on <br />
                         <span className="text-editorial-accent italic">Clinical Rigor.</span>
                     </h2>
@@ -285,7 +284,7 @@ const domainExpertise = [
                                 className="w-full flex items-center justify-between p-5 text-left gap-4 outline-none"
                             >
                                 <div className="flex items-center gap-4">
-                                    <span className="font-mono text-[9px] tracking-widest uppercase text-editorial-accent shrink-0">{item.ref}</span>
+                                    <span className="font-mono text-xs md:text-[9px] tracking-widest uppercase text-editorial-accent shrink-0">{item.ref}</span>
                                     <h3 className="font-serif text-lg text-editorial-text">{item.title}</h3>
                                 </div>
                                 <svg
@@ -301,21 +300,21 @@ const domainExpertise = [
                                 <div className="px-5 pb-6 space-y-6 border-t border-editorial-border/30">
                                     <div className="pt-4 space-y-3">
                                         {item.description.map((p, j) => (
-                                            <p key={j} className="text-sm text-editorial-subtext/80 leading-relaxed font-light">
+                                            <p key={j} className="text-sm text-editorial-text leading-relaxed font-normal">
                                                 {p}
                                             </p>
                                         ))}
                                     </div>
 
                                     <div className="space-y-3">
-                                        <p className="text-[9px] font-bold tracking-[0.3em] uppercase text-editorial-accent border-b border-editorial-accent/20 pb-3 inline-block">
+                                        <p className="text-xs font-bold tracking-[0.2em] uppercase text-editorial-accent border-b border-editorial-accent/20 pb-3 inline-block">
                                             Areas of Clinical Focus
                                         </p>
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
                                             {item.specialties.map((spec, j) => (
                                                 <div key={j} className="flex items-start gap-2">
-                                                    <span className="w-1 h-1 rounded-full bg-editorial-accent mt-1.5 shrink-0"></span>
-                                                    <p className="text-xs text-editorial-subtext/80 leading-tight">{spec}</p>
+                                                    <span className="w-1.5 h-1.5 rounded-full bg-editorial-accent mt-1.5 shrink-0"></span>
+                                                    <p className="text-sm text-editorial-text font-medium leading-tight">{spec}</p>
                                                 </div>
                                             ))}
                                         </div>
@@ -323,7 +322,7 @@ const domainExpertise = [
 
                                     <button
                                         onClick={() => window.__lenis?.scrollTo('#appointment')}
-                                        className="flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase text-editorial-accent hover:text-editorial-text transition-colors"
+                                        className="flex items-center gap-2 text-xs md:text-[10px] font-bold tracking-[0.2em] uppercase text-editorial-accent hover:text-editorial-text transition-colors"
                                     >
                                         Consult Practitioner
                                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
@@ -386,7 +385,7 @@ const domainExpertise = [
                                     </h4>
                                     <div className="space-y-4">
                                         {domainExpertise[desktopTab].description.map((p, i) => (
-                                            <p key={i} className="text-sm md:text-base text-editorial-subtext/90 leading-relaxed font-light max-w-2xl">
+                                            <p key={i} className="text-sm md:text-base text-editorial-text leading-relaxed font-normal max-w-2xl">
                                                 {p}
                                             </p>
                                         ))}
@@ -394,14 +393,14 @@ const domainExpertise = [
                                 </div>
 
                                 <div className="space-y-6">
-                                    <p className="text-[9px] font-bold tracking-[0.3em] uppercase text-editorial-accent border-b border-editorial-accent/20 pb-4 inline-block">
+                                    <p className="text-xs font-bold tracking-[0.2em] uppercase text-editorial-accent border-b border-editorial-accent/20 pb-4 inline-block">
                                         Areas of Clinical Focus
                                     </p>
                                     <div className="grid grid-cols-2 gap-x-8 gap-y-3">
                                         {domainExpertise[desktopTab].specialties.map((spec, i) => (
                                             <div key={i} className="flex items-start gap-2.5 group/spec">
-                                                <span className="w-1 h-1 rounded-full bg-editorial-accent mt-2 group-hover/spec:scale-150 transition-transform flex-shrink-0"></span>
-                                                <p className="text-xs md:text-[13px] text-editorial-subtext/80 group-hover/spec:text-editorial-text transition-colors leading-tight">
+                                                <span className="w-1.5 h-1.5 rounded-full bg-editorial-accent mt-2.5 group-hover/spec:scale-150 transition-transform flex-shrink-0"></span>
+                                                <p className="text-sm md:text-base text-editorial-text font-medium leading-tight">
                                                     {spec}
                                                 </p>
                                             </div>
@@ -414,13 +413,13 @@ const domainExpertise = [
                                 <div className="flex gap-4">
                                     <div className="h-10 w-px bg-editorial-border/60"></div>
                                     <div className="space-y-0.5">
-                                        <p className="text-[8px] font-bold tracking-widest text-editorial-subtext/40 uppercase">Standard of Care</p>
-                                        <p className="text-xs font-medium text-editorial-text italic">Clinical Excellence Guaranteed</p>
+                                        <p className="text-[10px] md:text-[8px] font-bold tracking-widest text-editorial-charcoal uppercase">Standard of Care</p>
+                                        <p className="text-xs font-semibold text-editorial-text italic">Clinical Excellence Guaranteed</p>
                                     </div>
                                 </div>
                                 <button
                                     onClick={() => window.__lenis?.scrollTo('#appointment')}
-                                    className="group flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase text-editorial-accent hover:text-editorial-text transition-colors"
+                                    className="group flex items-center gap-2 text-xs md:text-[10px] font-bold tracking-[0.2em] uppercase text-editorial-accent hover:text-editorial-text transition-colors"
                                 >
                                     Consult Practitioner
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="transform group-hover:translate-x-1 transition-transform">

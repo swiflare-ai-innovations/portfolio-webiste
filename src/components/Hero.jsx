@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { CustomEase } from 'gsap/all';
 import { ChevronDown, Award, Clock, Shield } from 'lucide-react';
@@ -237,24 +237,24 @@ const Hero = () => {
                     {/* Badge */}
                     <div className="hero-reveal inline-flex items-center gap-3 px-4 py-2 bg-white/60 backdrop-blur-sm border border-editorial-accent/20 rounded-full mb-8">
                         <span className="w-2 h-2 rounded-full bg-editorial-accent animate-pulse"></span>
-                        <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-editorial-charcoal">
+                        <span className="text-xs md:text-[11px] font-bold tracking-[0.4em] uppercase text-editorial-charcoal">
                             Trusted by 15,000+ Patients
                         </span>
                     </div>
 
                     {/* Main Title */}
-                    <h1 className="hero-title-main font-serif mb-8">
-                        <span className="block text-3xl sm:text-4xl md:text-5xl  xl:text-5.5xl leading-tight text-editorial-accent">
+                    <h1 className="hero-title-main font-serif mb-4 md:mb-8 w-full">
+                        <span className="block text-2xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-5.5xl leading-tight text-editorial-accent">
                             Dr. K. Kanaga Lakshmi
                         </span>
-                        <span className="block text-xl sm:text-2xl mt-4 text-editorial-charcoal/70 font-light">
+                        <span className="block text-xl sm:text-2xl mt-4 md:mt-4 text-editorial-charcoal font-normal">
                             Consultant Obstetrician, Gynaecologist & Fertility Specialist
                         </span>
                     </h1>
 
                     {/* Description */}
                     <div className="hero-reveal max-w-2xl mb-12">
-                        <p className="font-serif text-lg md:text-xl text-editorial-charcoal/80 leading-relaxed italic">
+                        <p className="font-serif text-lg md:text-xl text-editorial-charcoal leading-relaxed italic">
                             "Delivering world-class surgical precision and uncompromising compassionate care. A distinguished legacy of over <span className="text-editorial-accent font-bold not-italic">10 years</span> dedicated to elevating women's health."
                         </p>
                     </div>
@@ -263,15 +263,15 @@ const Hero = () => {
                     <div className="hero-reveal grid grid-cols-2 sm:grid-cols-3 gap-6 mb-12">
                         <div className="bg-white/40 backdrop-blur-sm p-6 rounded-2xl border border-editorial-border/40 hover:border-editorial-accent/30 transition-colors group">
                             <span className="block font-serif text-3xl font-bold text-editorial-charcoal group-hover:text-editorial-accent transition-colors">10+</span>
-                            <span className="text-[9px] font-bold tracking-widest uppercase text-editorial-subtext mt-1 block">Years Experience</span>
+                            <span className="text-[11px] md:text-[10px] font-bold tracking-widest uppercase text-editorial-subtext mt-1 block">Years Experience</span>
                         </div>
                         <div className="bg-white/40 backdrop-blur-sm p-6 rounded-2xl border border-editorial-border/40 hover:border-editorial-accent/30 transition-colors group">
                             <span className="block font-serif text-3xl font-bold text-editorial-charcoal group-hover:text-editorial-accent transition-colors">15k+</span>
-                            <span className="text-[9px] font-bold tracking-widest uppercase text-editorial-subtext mt-1 block">Deliveries</span>
+                            <span className="text-[11px] md:text-[10px] font-bold tracking-widest uppercase text-editorial-subtext mt-1 block">Deliveries</span>
                         </div>
                         <div className="col-span-2 sm:col-span-1 bg-editorial-accent/10 p-6 rounded-2xl border border-editorial-accent/20">
                             <span className="block font-serif text-lg font-bold text-editorial-accent leading-tight">MS OG · MRCOG (UK)</span>
-                            <span className="text-[9px] font-bold tracking-widest uppercase text-editorial-subtext mt-1 block">Clinical Excellence</span>
+                            <span className="text-[11px] md:text-[10px] font-bold tracking-widest uppercase text-editorial-subtext mt-1 block">Clinical Excellence</span>
                         </div>
                     </div>
 
@@ -280,7 +280,7 @@ const Hero = () => {
                         <a 
                             href="#appointment"
                             onClick={(e) => handleNavClick(e, '#appointment')}
-                            className="group relative px-10 py-5 bg-editorial-charcoal text-white text-[11px] font-bold tracking-[0.3em] uppercase transition-all duration-500 hover:bg-editorial-accent overflow-hidden text-center rounded-lg"
+                            className="group relative px-10 py-5 bg-editorial-charcoal text-white text-xs md:text-[11px] font-bold tracking-[0.3em] uppercase transition-all duration-500 hover:bg-editorial-accent overflow-hidden text-center rounded-lg"
                         >
                             <span className="relative z-10">Schedule Consultation</span>
                             <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></div>
@@ -288,7 +288,7 @@ const Hero = () => {
                         <a 
                             href="#about"
                             onClick={(e) => handleNavClick(e, '#about')}
-                            className="px-10 py-5 border-2 border-editorial-charcoal/10 text-editorial-charcoal text-[11px] font-bold tracking-[0.3em] uppercase hover:bg-editorial-charcoal hover:text-white transition-all duration-300 text-center rounded-lg"
+                            className="px-10 py-5 border-2 border-editorial-charcoal/10 text-editorial-charcoal text-xs md:text-[11px] font-bold tracking-[0.3em] uppercase hover:bg-editorial-charcoal hover:text-white transition-all duration-300 text-center rounded-lg"
                         >
                             Explore Profile
                         </a>

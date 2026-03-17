@@ -94,7 +94,7 @@ const Contact = () => {
     };
 
     return (
-        <section ref={sectionRef} id="contact" className="relative min-h-screen bg-editorial-silk pt-16 sm:pt-20 md:pt-24 lg:pt-28 overflow-hidden flex flex-col justify-between">
+        <section ref={sectionRef} id="contact" className="relative bg-editorial-bg pt-12 md:pt-16 lg:pt-20 overflow-hidden flex flex-col justify-between">
             
             {/* The Cinematic Signature Background */}
             <div className="absolute bottom-0 left-0 w-full overflow-hidden pointer-events-none select-none z-0" style={{ opacity: 0, visibility: 'hidden' }}>
@@ -106,18 +106,18 @@ const Contact = () => {
             <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 w-full">
                 
                 {/* Grand Finale Header */}
-                <div className="contact-reveal mb-32 space-y-4" style={{ opacity: 0, visibility: 'hidden' }}>
-                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-editorial-accent/10 border border-editorial-accent/20 rounded-full">
+                <div className="contact-reveal mb-12 md:mb-32 space-y-2 md:space-y-4" style={{ opacity: 0, visibility: 'hidden' }}>
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-editorial-accent/10 border border-editorial-accent/20 rounded-full mb-2 md:mb-4">
                         <span className="w-1.5 h-1.5 rounded-full bg-editorial-accent"></span>
-                        <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-editorial-subtext">Contact</span>
+                        <span className="text-[11px] md:text-[10px] font-bold tracking-[0.3em] uppercase text-editorial-subtext">Contact</span>
                     </div>
-                    <h2 className="font-serif text-6xl md:text-6xl text-editorial-text tracking-tighter leading-[0.85]">
+                    <h2 className="font-serif text-3xl md:text-6xl text-editorial-text tracking-tighter leading-[0.85] w-full">
                         Surgical Mastery <br />
                         <span className="text-editorial-accent ml-[5%]">Human Care</span>
                     </h2>
                 </div>
 
-                <div className="contact-grid grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-32">
+                <div className="contact-grid grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-12 md:mb-32">
                     
                     {/* The Command Center Box */}
                     <div className="contact-reveal lg:col-span-7 bg-editorial-text text-editorial-silk p-12 md:p-20 relative overflow-hidden group shadow-2xl" style={{ opacity: 0, visibility: 'hidden' }}>
@@ -129,15 +129,15 @@ const Contact = () => {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                                 <a href="tel:+918344795191" className="block space-y-3 group/link">
-                                    <p className="text-[9px] font-bold uppercase tracking-widest opacity-40">Direct Connection</p>
+                                    <p className="text-xs md:text-[9px] font-bold uppercase tracking-widest text-editorial-silk/60">Direct Connection</p>
                                     <p className="font-serif text-2xl md:text-3xl transition-transform duration-500 group-hover/link:translate-x-2">
                                         +91 83447 95191
                                     </p>
                                     <div className="h-px w-0 group-hover/link:w-full bg-editorial-accent transition-all duration-700"></div>
                                 </a>
                                 <a href="mailto:kanaga25jan@gmail.com" className="block space-y-3 group/link">
-                                    <p className="text-[9px] font-bold uppercase tracking-widest opacity-40">Editorial Channel</p>
-                                    <p className="font-serif text-2xl md:text-3xl transition-transform duration-500 group-hover/link:translate-x-2 break-all">
+                                    <p className="text-xs md:text-[9px] font-bold uppercase tracking-widest text-editorial-silk/60">Editorial Channel</p>
+                                    <p className="font-serif text-2xl md:text-3xl transition-transform duration-500 group-hover/link:translate-x-2 break-words">
                                         kanaga25jan@gmail.com
                                     </p>
                                     <div className="h-px w-0 group-hover/link:w-full bg-editorial-accent transition-all duration-700"></div>
@@ -218,13 +218,14 @@ const Contact = () => {
                             { name: 'About', href: '#about' },
                             { name: 'Timeline', href: '#experience' },
                             { name: 'Expertise', href: '#expertise' },
+                            { name: 'Testimonials', href: '#testimonials' },
                             { name: 'Contact', href: '#contact' }
                         ].map((link) => (
                             <li key={link.name}>
                                 <a 
                                     href={link.href} 
                                     onClick={(e) => handleNavClick(e, link.href)}
-                                    className="text-[9px] font-bold tracking-[0.3em] uppercase text-editorial-text hover:opacity-100 opacity-60 transition-all duration-500"
+                                    className="text-[11px] md:text-[9px] font-bold tracking-[0.3em] uppercase text-editorial-text hover:opacity-100 opacity-60 transition-all duration-500"
                                 >
                                     {link.name}
                                 </a>
@@ -232,9 +233,9 @@ const Contact = () => {
                         ))}
                     </ul>
 
-                    <div className="text-right">
-                        <p className="text-[8px] font-bold tracking-[0.3em] uppercase opacity-30">© 2026 Professional Portfolio</p>
-                        <p className="text-[8px] font-bold tracking-[0.3em] uppercase opacity-30">All Rights Reserved</p>
+                    <div className="text-center md:text-right">
+                        <p className="text-[11px] md:text-[8px] font-bold tracking-[0.3em] uppercase opacity-40">© 2026 Professional Portfolio</p>
+                        <p className="text-[11px] md:text-[8px] font-bold tracking-[0.3em] uppercase opacity-40">All Rights Reserved</p>
                     </div>
                 </div>
             </div>

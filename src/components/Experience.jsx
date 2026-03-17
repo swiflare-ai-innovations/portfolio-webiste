@@ -6,86 +6,58 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Experience = () => {
     const containerRef = useRef(null);
-    const lineRef = useRef(null);
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            // 1. Growing Life Line Animation
-            gsap.fromTo(lineRef.current, 
-                { scaleY: 0 },
-                { 
-                    scaleY: 1, 
-                    ease: "none",
+            // Header animation
+            gsap.fromTo('.header-reveal',
+                { opacity: 0, y: 20 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: "power2.out",
                     scrollTrigger: {
                         trigger: containerRef.current,
-                        start: "top 20%",
-                        end: "bottom 80%",
-                        scrub: true
+                        start: 'top 80%',
+                        toggleActions: 'play none none none'
                     }
                 }
             );
 
-            // 2. Milestone Card Reveals
-            gsap.utils.toArray('.milestone-card').forEach((card, i) => {
-                const isEven = i % 2 === 0;
-                
-                gsap.fromTo(card,
-                    { 
-                        autoAlpha: 0, 
-                        x: isEven ? -40 : 40,
-                        y: 30 
-                    },
-                    {
-                        autoAlpha: 1,
-                        x: 0,
-                        y: 0,
-                        duration: 1.0,
-                        ease: "power2.out",
-                        scrollTrigger: {
-                            trigger: card,
-                            start: 'top 90%',
-                            toggleActions: 'play none none none'
-                        }
+            // Cards stagger animation
+            gsap.fromTo('.milestone-card',
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    stagger: 0.1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: '.cards-container',
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
                     }
-                );
-            });
+                }
+            );
 
-            // 3. Shadow Year Reveals
-            gsap.utils.toArray('.shadow-year').forEach((year) => {
-                gsap.fromTo(year,
-                    { opacity: 0, scale: 0.9 },
-                    {
-                        opacity: 0.03,
-                        scale: 1,
-                        duration: 1.5,
-                        ease: 'power2.out',
-                        scrollTrigger: {
-                            trigger: year,
-                            start: 'top 92%',
-                            toggleActions: 'play none none none'
-                        }
+            // Footer animation
+            gsap.fromTo('.footer-reveal',
+                { opacity: 0, scale: 0.98 },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: '.cards-container',
+                        start: 'top 60%',
+                        toggleActions: 'play none none none'
                     }
-                );
-            });
-
-            // 4. Marker Dot Animation
-            gsap.utils.toArray('.marker-dot').forEach((dot) => {
-                gsap.fromTo(dot,
-                    { scale: 0, opacity: 0 },
-                    {
-                        scale: 1,
-                        opacity: 1,
-                        duration: 0.6,
-                        ease: "back.out(1.7)",
-                        scrollTrigger: {
-                            trigger: dot,
-                            start: "top 70%",
-                            toggleActions: "play none none none"
-                        }
-                    }
-                );
-            });
-
+                }
+            );
         }, containerRef);
 
         return () => ctx.revert();
@@ -132,169 +104,93 @@ const Experience = () => {
             year: '2022',
             period: '2022 - 2025',
             title: 'Reproductive Excellence',
-            role: 'Consultant & Fellow in Reproductive Medicine',
+            role: 'Consultant & Fellow in Repro. Medicine',
             institution: 'Reputed Center | Iswarya Fertility Center',
-            desc: 'Integrating clinical consultancy with advanced fellowship training, focusing on assisted reproductive technology and endocrinology to help families achieve their dreams through science.',
+            desc: 'Focusing on assisted reproductive technology and endocrinology to help families achieve their dreams through science.',
             type: 'Specialist'
         },
         {
             year: '2024',
             period: '2024 - Present',
             title: 'Clinical Leadership',
-            role: 'Consultant Obstetrician, Gynaecologist & Fertility Specialist',
+            role: 'Consultant Obstetrician & Fertility Specialist',
             institution: 'MGM Malar Hospital, Adyar',
-            desc: 'Delivering world-class healthcare, leading complex gynaecological surgeries, high-risk obstetrics, and clinical management at a premier multi-specialty institution.',
+            desc: 'Delivering world-class healthcare, leading complex gynaecological surgeries and high-risk obstetrics.',
             type: 'Current'
         }
     ];
 
     return (
-        <section ref={containerRef} id="experience" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-editorial-silk relative overflow-hidden isolate">
+        <section ref={containerRef} id="experience" className="py-12 md:py-16 lg:py-20 bg-editorial-bg relative overflow-hidden isolate flex items-center justify-center">
             
             {/* Background Texture */}
             <div className="absolute inset-0 opacity-[0.01] pointer-events-none select-none z-0 bg-[url('https://www.transparenttextures.com/patterns/pinstripe-light.png')]"></div>
 
-            <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 w-full flex flex-col justify-center h-full gap-4 lg:gap-12">
                 
                 {/* Section Header */}
-                <div className="mb-32 text-center space-y-6">
-                    <div className="inline-flex items-center gap-3 px-4 py-1.5 bg-editorial-accent/10 border border-editorial-accent/20 rounded-full">
+                <div className="text-center space-y-4 pt-4 lg:pt-0">
+                    <div className="header-reveal inline-flex items-center gap-2 px-3 py-1.5 bg-editorial-accent/10 border border-editorial-accent/20 rounded-full">
                         <span className="w-1.5 h-1.5 rounded-full bg-editorial-accent animate-pulse"></span>
-                        <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-editorial-subtext">Timeline</span>
+                        <span className="text-[11px] md:text-[10px] font-bold tracking-[0.3em] uppercase text-editorial-subtext">Timeline</span>
                     </div>
-                    <h2 className="font-serif text-5xl md:text-6xl text-editorial-text tracking-tighter leading-none">
-                        Clinical <br />
-                        <span className="text-editorial-accent">Excellence</span>
+                    <h2 className="header-reveal font-serif text-3xl md:text-5xl lg:text-6xl text-editorial-text tracking-tighter leading-none w-full">
+                        Clinical <span className="text-editorial-accent">Excellence</span>
                     </h2>
-                    <p className="font-serif text-xl text-editorial-subtext opacity-60 max-w-xl mx-auto">
+                    <p className="header-reveal font-serif text-lg lg:text-xl text-editorial-text leading-relaxed max-w-xl mx-auto">
                         Two decades of surgical precision and academic leadership, documented in chronological sequence.
                     </p>
                 </div>
 
-                {/* Timeline Container */}
-                <div className="relative">
-                    
-                    {/* The Life Line (Central Axis) */}
-                    <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-editorial-accent/10 -translate-x-1/2 hidden md:block">
-                        <div 
-                            ref={lineRef}
-                            className="w-full h-full bg-editorial-accent origin-top"
-                            style={{ transform: 'scaleY(0)' }}
-                        ></div>
-                    </div>
+                {/* Grid Container */}
+                <div className="cards-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 relative z-10 w-full">
+                    {timelineData.map((item, i) => (
+                        <div key={i} className="milestone-card relative p-8 bg-white/60 backdrop-blur-xl border border-editorial-border/40 rounded-2xl hover:border-editorial-accent/30 hover:bg-white/90 transition-all duration-500 flex flex-col justify-between group overflow-hidden shadow-sm hover:shadow-md">
+                            {/* Decorative Year Number Background */}
+                            <span className="absolute -bottom-4 -right-1 font-serif text-7xl lg:text-8xl text-editorial-text opacity-[0.03] group-hover:opacity-[0.05] group-hover:scale-110 transition-all duration-700 pointer-events-none select-none z-0">
+                                {item.year}
+                            </span>
 
-                    {/* Milestones Staggered */}
-                    <div className="space-y-16 md:space-y-24">
-                        {timelineData.map((item, i) => (
-                            <div key={i} className="relative grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-0 items-center">
-                                
-                                {/* Shadow Year Background */}
-                                <div className={`shadow-year absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 ${i % 2 === 0 ? 'md:justify-start' : 'md:justify-end'}`}>
-                                    <span className="font-serif text-[25vw] md:text-[20vw] text-editorial-text leading-none tracking-tighter">
-                                        {item.year}
+                            <div className="relative z-10 flex-grow">
+                                <div className="flex items-center justify-between gap-2 mb-4">
+                                    <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-editorial-accent bg-editorial-accent/5 px-2 py-1">
+                                        {item.period}
                                     </span>
                                 </div>
+                                
+                                <h3 className="font-serif text-xl lg:text-2xl text-editorial-text group-hover:text-editorial-accent transition-colors duration-500 leading-tight mb-1">
+                                    {item.title}
+                                </h3>
+                                <h4 className="font-serif text-base lg:text-lg text-editorial-text font-medium leading-tight mb-3">
+                                    {item.role}
+                                </h4>
 
-                                {/* Central Marker Dot */}
-                                <div className="marker-dot absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-4 border-editorial-silk bg-editorial-accent z-20 shadow-sm hidden md:block"></div>
-
-                                {i % 2 === 0 ? (
-                                    <>
-                                        <div className="milestone-card relative z-10 w-full md:max-w-lg md:pr-12 justify-self-end text-right">
-                                            <div className="p-6 md:p-8 bg-white/60 backdrop-blur-xl border border-editorial-border/40 rounded-2xl md:rounded-3xl hover:border-editorial-accent/30 transition-colors duration-500 group">
-                                                <div className="space-y-6">
-                                                    <div className="flex items-center gap-4 flex-row-reverse">
-                                                        <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-editorial-accent bg-editorial-accent/5 px-2 py-1">
-                                                            {item.period}
-                                                        </span>
-                                                        <span className="text-[9px] font-bold tracking-[0.2em] uppercase text-editorial-subtext/40">{item.type}</span>
-                                                    </div>
-                                                    
-                                                    <div className="space-y-2">
-                                                        <h3 className="font-serif text-3xl md:text-4xl text-editorial-text group-hover:text-editorial-accent transition-colors duration-500">
-                                                            {item.title}
-                                                        </h3>
-                                                        <h4 className="font-serif text-xl text-editorial-subtext leading-tight">
-                                                            {item.role}
-                                                        </h4>
-                                                    </div>
-
-                                                    <p className="text-sm md:text-base text-editorial-subtext/80 font-light leading-relaxed">
-                                                        {item.desc}
-                                                    </p>
-
-                                                    <div className="flex items-center gap-4 pt-4 border-t border-editorial-border/20 flex-row-reverse">
-                                                        <div className="w-8 h-[1px] bg-editorial-accent/30"></div>
-                                                        <span className="text-[11px] font-bold tracking-widest uppercase text-editorial-text opacity-60">{item.institution}</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="hidden md:block"></div>
-                                    </>
-                                ) : (
-                                    <>
-                                        <div className="hidden md:block"></div>
-                                        {/* Content Card (Right) */}
-                                        <div className="milestone-card relative z-10 w-full md:max-w-lg md:pl-12 justify-self-start text-left">
-                                            <div className="p-6 md:p-8 bg-white/60 backdrop-blur-xl border border-editorial-border/40 rounded-2xl md:rounded-3xl hover:border-editorial-accent/30 transition-colors duration-500 group">
-                                                <div className="space-y-6">
-                                                    <div className="flex items-center gap-4 flex-row">
-                                                        <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-editorial-accent bg-editorial-accent/5 px-2 py-1">
-                                                            {item.period}
-                                                        </span>
-                                                        <span className="text-[9px] font-bold tracking-[0.2em] uppercase text-editorial-subtext/40">{item.type}</span>
-                                                    </div>
-                                                    
-                                                    <div className="space-y-2">
-                                                        <h3 className="font-serif text-3xl md:text-4xl text-editorial-text group-hover:text-editorial-accent transition-colors duration-500">
-                                                            {item.title}
-                                                        </h3>
-                                                        <h4 className="font-serif text-xl text-editorial-subtext leading-tight">
-                                                            {item.role}
-                                                        </h4>
-                                                    </div>
-
-                                                    <p className="text-sm md:text-base text-editorial-subtext/80 font-light leading-relaxed">
-                                                        {item.desc}
-                                                    </p>
-
-                                                    <div className="flex items-center gap-4 pt-4 border-t border-editorial-border/20 flex-row">
-                                                        <div className="w-8 h-[1px] bg-editorial-accent/30"></div>
-                                                        <span className="text-[11px] font-bold tracking-widest uppercase text-editorial-text opacity-60">{item.institution}</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </>
-                                )}
+                                <p className="text-sm lg:text-base text-editorial-text font-normal leading-relaxed break-words">
+                                    {item.desc}
+                                </p>
                             </div>
-                        ))}
-                    </div>
 
-                </div>
-
-                {/* Closing Statement - Integrated Conclusion */}
-                <div className="mt-28 relative max-w-4xl mx-auto px-6">
-                    <div className="relative p-10 md:p-16 bg-editorial-accent/5 rounded-[2rem] border border-editorial-accent/10 overflow-hidden text-center">
-                        {/* Decorative Quote Mark */}
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-editorial-silk rounded-full flex items-center justify-center border border-editorial-accent/10">
-                            <span className="font-serif text-5xl text-editorial-accent leading-none mt-4">"</span>
-                        </div>
-
-                        <div className="relative z-10 space-y-8">
-                            <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-editorial-text leading-tight tracking-tight italic">
-                                Continuously redefining the standards of reproductive healthcare through clinical mastery and academic rigor.
-                            </p>
-                            
-                            <div className="flex items-center justify-center gap-4">
-                                <div className="h-[1px] w-12 bg-editorial-accent/30"></div>
-                                <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-editorial-accent">Philosophy</span>
-                                <div className="h-[1px] w-12 bg-editorial-accent/30"></div>
+                            <div className="pt-4 mt-4 border-t border-editorial-border/30 relative z-10 flex-grow-0 flex flex-col items-start gap-2">
+                                <span className="text-[11px] md:text-[10px] font-bold tracking-widest uppercase text-editorial-text opacity-100 break-words w-full">
+                                    {item.institution}
+                                </span>
+                                <span className="text-[10px] md:text-[9px] font-bold tracking-[0.2em] uppercase text-editorial-subtext shrink-0">
+                                    {item.type}
+                                </span>
                             </div>
                         </div>
+                    ))}
+                </div>
+
+                {/* Integrated Conclusion */}
+                <div className="footer-reveal relative w-full pb-10 lg:pb-0">
+                    <div className="relative p-6 lg:p-8 bg-editorial-accent/5 rounded-2xl border border-editorial-accent/10 overflow-hidden text-center max-w-4xl mx-auto">
+                        <p className="relative z-10 font-serif text-lg lg:text-2xl text-editorial-text leading-tight tracking-tight italic">
+                            "Continuously redefining the standards of reproductive healthcare through clinical mastery and academic rigor."
+                        </p>
                     </div>
                 </div>
+
             </div>
         </section>
     );
