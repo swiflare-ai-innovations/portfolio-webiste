@@ -60,42 +60,42 @@ const Expertise = () => {
             });
 
             headerTl.fromTo('.header-tag', 
-                { opacity: 0, x: -20 },
-                { opacity: 1, x: 0, duration: 0.8, ease: 'power2.out' }
+                { opacity: 0, x: -10 },
+                { opacity: 1, x: 0, duration: 0.3, ease: 'power3.out' }
             )
             .fromTo('.header-title',
-                { opacity: 0, y: 30 },
-                { opacity: 1, y: 0, duration: 1.0, ease: 'power2.out' },
-                "-=0.6"
+                { opacity: 0, y: 15 },
+                { opacity: 1, y: 0, duration: 0.4, ease: 'power3.out' },
+                "-=0.2"
             );
 
             // Staggered Item Reveal
             gsap.fromTo('.expertise-item',
-                { opacity: 0, x: -20 },
+                { opacity: 0, x: -15 },
                 {
                     opacity: 1,
                     x: 0,
-                    duration: 0.8,
-                    stagger: 0.08,
-                    ease: 'power2.out',
+                    duration: 0.3,
+                    stagger: 0.03,
+                    ease: 'power3.out',
                     scrollTrigger: {
-                        trigger: '.expertise-container',
-                        start: 'top 85%',
+                        trigger: '.expertise-reveal-container',
+                        start: 'top 95%',
                     }
                 }
             );
 
             // Detailed Content Reveal
             gsap.fromTo('.expertise-detail-card',
-                { opacity: 0, y: 30 },
+                { opacity: 0, y: 15 },
                 {
                     opacity: 1,
                     y: 0,
-                    duration: 1.0,
-                    ease: 'power2.out',
+                    duration: 0.4,
+                    ease: 'power3.out',
                     scrollTrigger: {
-                        trigger: '.expertise-container',
-                        start: 'top 80%',
+                        trigger: '.expertise-reveal-container',
+                        start: 'top 90%',
                     }
                 }
             );
@@ -125,8 +125,8 @@ const Expertise = () => {
             }
 
             gsap.fromTo(detailCardRef.current,
-                { opacity: 0, y: -60 },
-                { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', clearProps: 'all' }
+                { opacity: 0, y: -10 },
+                { opacity: 1, y: 0, duration: 0.25, ease: 'power4.out', clearProps: 'all' }
             );
         }
     }, [activeTab]);
@@ -250,7 +250,7 @@ const domainExpertise = [
                 </div>
 
                 {/* === MOBILE / TABLET: Accordion Cards === */}
-                <div className="block lg:hidden space-y-4">
+                <div className="expertise-reveal-container block lg:hidden space-y-4">
                     {domainExpertise.map((item, i) => (
                         <div
                             key={i}
@@ -271,7 +271,7 @@ const domainExpertise = [
                                             if (window.__lenis) {
                                                 window.__lenis.scrollTo(el, {
                                                     offset,
-                                                    duration: 1.4,
+                                                    duration: 0.8,
                                                     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
                                                 });
                                             } else {
@@ -336,7 +336,7 @@ const domainExpertise = [
                 </div>
 
                 {/* === DESKTOP (lg+): Sticky Sidebar + Detail Card === */}
-                <div className="expertise-container hidden lg:grid grid-cols-12 gap-12 items-start">
+                <div className="expertise-container expertise-reveal-container hidden lg:grid grid-cols-12 gap-12 items-start">
                     
                     {/* Left: Navigation List - STICKY */}
                     <div className="col-span-5 sticky top-32 space-y-2">
