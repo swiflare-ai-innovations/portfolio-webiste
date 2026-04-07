@@ -131,7 +131,7 @@ const Header = () => {
                                 <a
                                     href={link.href}
                                     onClick={(e) => handleNavClick(e, link.href)}
-                                    className="text-xs font-semibold uppercase tracking-widest text-editorial-subtext hover:text-editorial-charcoal transition-colors py-2"
+                                    className="text-[14px] font-semibold tracking-widest text-editorial-subtext hover:text-editorial-charcoal transition-colors py-2"
                                 >
                                     {link.name}
                                 </a>

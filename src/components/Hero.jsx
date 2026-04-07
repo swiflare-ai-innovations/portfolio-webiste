@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+﻿import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { CustomEase } from 'gsap/all';
 import { ChevronDown, Award, Clock, Shield } from 'lucide-react';
@@ -237,7 +237,7 @@ const Hero = () => {
                     {/* Badge */}
                     <div className="hero-reveal inline-flex items-center gap-3 px-4 py-2 bg-editorial-silk/80 backdrop-blur-sm border border-editorial-secondary/30 rounded-full mb-8">
                         <span className="w-2 h-2 rounded-full bg-editorial-secondary animate-pulse"></span>
-                        <span className="text-xs md:text-[11px] font-bold tracking-[0.4em] uppercase text-editorial-charcoal">
+                        <span className="text-xs md:text-[11px] font-bold tracking-[0.4em] text-editorial-charcoal">
                             Trusted by 15,000+ Patients
                         </span>
                     </div>
@@ -255,7 +255,7 @@ const Hero = () => {
                     {/* Description */}
                     <div className="hero-reveal max-w-2xl mb-12">
                         <p className="font-serif text-lg md:text-xl text-editorial-charcoal leading-relaxed italic">
-                            "Delivering world-class surgical precision and uncompromising compassionate care. A distinguished legacy of over <span className="text-editorial-secondary font-bold not-italic">10 years</span> dedicated to elevating women's health."
+                            "Delivering world-class surgical precision and uncompromising compassionate care. A distinguished legacy of over 10 years dedicated to elevating women's health."
                         </p>
                     </div>
 
@@ -270,7 +270,7 @@ const Hero = () => {
                             <span className="text-[11px] md:text-[10px] font-bold tracking-widest uppercase text-editorial-subtext mt-1 block">Deliveries</span>
                         </div>
                         <div className="col-span-2 sm:col-span-1 bg-editorial-secondary/10 p-6 rounded-2xl border border-editorial-secondary/20">
-                            <span className="block font-serif text-lg font-bold text-editorial-secondary leading-tight">MS OG · MRCOG (UK)</span>
+                            <span className="block font-serif text-2xl font-bold text-editorial-charcoal group-hover:text-editorial-accent transition-colors">MS OG · MRCOG (UK)</span>
                             <span className="text-[11px] md:text-[10px] font-bold tracking-widest uppercase text-editorial-subtext mt-1 block">Clinical Excellence</span>
                         </div>
                     </div>

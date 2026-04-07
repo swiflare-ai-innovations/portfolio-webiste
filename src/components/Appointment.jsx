@@ -196,12 +196,7 @@ const Appointment = () => {
                     </div>
                 </div>
 
-                {/* Footnote */}
-                <div className="appointment-reveal mt-24 text-center" style={{ opacity: 0, visibility: 'hidden' }}>
-                    <p className="text-[11px] md:text-[9px] font-mono tracking-widest uppercase text-editorial-text">
-                        All clinical data is handled with maximum privacy standards • 2026 Registry_KL
-                    </p>
-                </div>
+
 
             </div>
         </section>
