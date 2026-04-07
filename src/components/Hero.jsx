@@ -235,8 +235,8 @@ const Hero = () => {
                 {/* Left Content */}
                 <div className="w-full lg:w-3/5 text-left order-2 lg:order-1">
                     {/* Badge */}
-                    <div className="hero-reveal inline-flex items-center gap-3 px-4 py-2 bg-white/60 backdrop-blur-sm border border-editorial-accent/20 rounded-full mb-8">
-                        <span className="w-2 h-2 rounded-full bg-editorial-accent animate-pulse"></span>
+                    <div className="hero-reveal inline-flex items-center gap-3 px-4 py-2 bg-editorial-silk/80 backdrop-blur-sm border border-editorial-secondary/30 rounded-full mb-8">
+                        <span className="w-2 h-2 rounded-full bg-editorial-secondary animate-pulse"></span>
                         <span className="text-xs md:text-[11px] font-bold tracking-[0.4em] uppercase text-editorial-charcoal">
                             Trusted by 15,000+ Patients
                         </span>
@@ -244,7 +244,7 @@ const Hero = () => {
 
                     {/* Main Title */}
                     <h1 className="hero-title-main font-serif mb-4 md:mb-8 w-full">
-                        <span className="block text-2xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-5.5xl leading-tight text-editorial-accent">
+                        <span className="block text-2xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-5.5xl leading-tight text-editorial-heading">
                             Dr. K. Kanaga Lakshmi
                         </span>
                         <span className="block text-xl sm:text-2xl mt-4 md:mt-4 text-editorial-charcoal font-normal">
@@ -255,22 +255,22 @@ const Hero = () => {
                     {/* Description */}
                     <div className="hero-reveal max-w-2xl mb-12">
                         <p className="font-serif text-lg md:text-xl text-editorial-charcoal leading-relaxed italic">
-                            "Delivering world-class surgical precision and uncompromising compassionate care. A distinguished legacy of over <span className="text-editorial-accent font-bold not-italic">10 years</span> dedicated to elevating women's health."
+                            "Delivering world-class surgical precision and uncompromising compassionate care. A distinguished legacy of over <span className="text-editorial-secondary font-bold not-italic">10 years</span> dedicated to elevating women's health."
                         </p>
                     </div>
 
                     {/* Stats Cards */}
                     <div className="hero-reveal grid grid-cols-2 sm:grid-cols-3 gap-6 mb-12">
-                        <div className="bg-white/40 backdrop-blur-sm p-6 rounded-2xl border border-editorial-border/40 hover:border-editorial-accent/30 transition-colors group">
+                        <div className="bg-editorial-silk/85 backdrop-blur-sm p-6 rounded-2xl border border-editorial-border/60 hover:border-editorial-accent/40 transition-colors group">
                             <span className="block font-serif text-3xl font-bold text-editorial-charcoal group-hover:text-editorial-accent transition-colors">10+</span>
                             <span className="text-[11px] md:text-[10px] font-bold tracking-widest uppercase text-editorial-subtext mt-1 block">Years Experience</span>
                         </div>
-                        <div className="bg-white/40 backdrop-blur-sm p-6 rounded-2xl border border-editorial-border/40 hover:border-editorial-accent/30 transition-colors group">
+                        <div className="bg-editorial-silk/85 backdrop-blur-sm p-6 rounded-2xl border border-editorial-border/60 hover:border-editorial-accent/40 transition-colors group">
                             <span className="block font-serif text-3xl font-bold text-editorial-charcoal group-hover:text-editorial-accent transition-colors">15k+</span>
                             <span className="text-[11px] md:text-[10px] font-bold tracking-widest uppercase text-editorial-subtext mt-1 block">Deliveries</span>
                         </div>
-                        <div className="col-span-2 sm:col-span-1 bg-editorial-accent/10 p-6 rounded-2xl border border-editorial-accent/20">
-                            <span className="block font-serif text-lg font-bold text-editorial-accent leading-tight">MS OG · MRCOG (UK)</span>
+                        <div className="col-span-2 sm:col-span-1 bg-editorial-secondary/10 p-6 rounded-2xl border border-editorial-secondary/20">
+                            <span className="block font-serif text-lg font-bold text-editorial-secondary leading-tight">MS OG · MRCOG (UK)</span>
                             <span className="text-[11px] md:text-[10px] font-bold tracking-widest uppercase text-editorial-subtext mt-1 block">Clinical Excellence</span>
                         </div>
                     </div>
@@ -280,7 +280,7 @@ const Hero = () => {
                         <a 
                             href="#appointment"
                             onClick={(e) => handleNavClick(e, '#appointment')}
-                            className="group relative px-10 py-5 bg-editorial-charcoal text-white text-xs md:text-[11px] font-bold tracking-[0.3em] uppercase transition-all duration-500 hover:bg-editorial-accent overflow-hidden text-center rounded-lg"
+                            className="group relative px-10 py-5 bg-editorial-secondary text-white text-sm md:text-base font-medium tracking-wide transition-all duration-500 hover:bg-editorial-accent overflow-hidden text-center rounded-lg"
                         >
                             <span className="relative z-10">Schedule Consultation</span>
                             <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></div>
@@ -288,7 +288,7 @@ const Hero = () => {
                         <a 
                             href="#about"
                             onClick={(e) => handleNavClick(e, '#about')}
-                            className="px-10 py-5 border-2 border-editorial-charcoal/10 text-editorial-charcoal text-xs md:text-[11px] font-bold tracking-[0.3em] uppercase hover:bg-editorial-charcoal hover:text-white transition-all duration-300 text-center rounded-lg"
+                            className="px-10 py-5 border border-editorial-border/60 bg-editorial-silk/70 backdrop-blur-md text-editorial-secondary text-sm md:text-base font-medium tracking-wide hover:bg-editorial-silk hover:border-editorial-accent/40 transition-all duration-300 text-center rounded-lg"
                         >
                             Explore Profile
                         </a>
@@ -300,23 +300,23 @@ const Hero = () => {
                     {/* Floating elements with subtle colors */}
                     <div 
                         ref={el => floatingElementsRef.current[0] = el}
-                        className="hero-floating absolute -top-8 -left-8 w-20 h-20 bg-editorial-accent/10 rounded-full backdrop-blur-sm border border-editorial-accent/20 flex items-center justify-center z-20 shadow-xl"
+                        className="hero-floating absolute -top-8 -left-8 w-20 h-20 bg-editorial-secondary/10 rounded-full backdrop-blur-sm border border-editorial-secondary/20 flex items-center justify-center z-20 shadow-xl"
                     >
-                        <Award size={32} className="text-editorial-accent" />
+                        <Award size={32} className="text-editorial-secondary" />
                     </div>
                     
                     <div 
                         ref={el => floatingElementsRef.current[1] = el}
-                        className="hero-floating absolute -bottom-10 right-0 w-24 h-24 bg-white/60 backdrop-blur-sm rounded-full border border-editorial-border/40 flex items-center justify-center z-20 shadow-xl"
+                        className="hero-floating absolute -bottom-10 right-0 w-24 h-24 bg-editorial-silk/85 backdrop-blur-sm rounded-full border border-editorial-border/60 flex items-center justify-center z-20 shadow-xl"
                     >
-                        <Shield size={36} className="text-editorial-charcoal/60" />
+                        <Shield size={36} className="text-editorial-charcoal" />
                     </div>
                     
                     <div 
                         ref={el => floatingElementsRef.current[2] = el}
                         className="hero-floating absolute top-1/2 -right-12 w-16 h-16 bg-editorial-charcoal/5 rounded-full backdrop-blur-sm border border-editorial-charcoal/10 flex items-center justify-center z-20"
                     >
-                        <Clock size={24} className="text-editorial-charcoal/40" />
+                        <Clock size={24} className="text-editorial-charcoal" />
                     </div>
 
                     {/* Main Image with Organic Frame */}
@@ -326,7 +326,7 @@ const Hero = () => {
                         
                         <div 
                             ref={imageRef}
-                            className="relative aspect-[4/5] overflow-hidden shadow-2xl bg-gradient-to-br from-editorial-accent/25 via-rose-100/40 to-amber-50"
+                            className="relative aspect-[4/5] overflow-hidden shadow-2xl bg-gradient-to-br from-editorial-accent/25 via-editorial-secondary/10 to-editorial-bg"
                             style={{ 
                                 borderRadius: '60% 40% 30% 70% / 40% 30% 70% 60%',
                                 willChange: 'transform, border-radius'

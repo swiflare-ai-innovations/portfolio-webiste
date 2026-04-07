@@ -234,28 +234,36 @@ const domainExpertise = [
     }
 ];
 
+const orderedDomainExpertise = [
+    domainExpertise[0], // HRO-01
+    domainExpertise[4], // WHS-05
+    domainExpertise[2], // RM-03
+    domainExpertise[3], // MIS-04
+    domainExpertise[1], // GON-02
+];
+
     return (
         <section ref={sectionRef} id="expertise" className="py-12 md:py-20 bg-editorial-bg relative isolate">
             <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
                 
                 <div className="expertise-header mb-8 md:mb-20 w-full text-left">
-                    <div className="header-tag inline-flex items-center gap-2 px-3 py-1.5 bg-editorial-accent/10 border border-editorial-accent/20 rounded-full mb-4 md:mb-6">
-                        <span className="w-1.5 h-1.5 rounded-full bg-editorial-accent"></span>
+                    <div className="header-tag inline-flex items-center gap-2 px-3 py-1.5 bg-editorial-secondary/10 border border-editorial-secondary/20 rounded-full mb-4 md:mb-6">
+                        <span className="w-1.5 h-1.5 rounded-full bg-editorial-secondary"></span>
                         <span className="text-xs md:text-[10px] font-bold tracking-[0.3em] uppercase text-editorial-subtext">Scope of Practice</span>
                     </div>
                     <h2 className="header-title font-serif text-3xl md:text-7xl text-editorial-text tracking-tight leading-[1.1] w-full">
                         Expertise Built on <br />
-                        <span className="text-editorial-accent italic">Clinical Rigor.</span>
+                        <span className="text-editorial-heading italic">Clinical Rigor.</span>
                     </h2>
                 </div>
 
                 {/* === MOBILE / TABLET: Accordion Cards === */}
                 <div className="expertise-reveal-container block lg:hidden space-y-4">
-                    {domainExpertise.map((item, i) => (
+                    {orderedDomainExpertise.map((item, i) => (
                         <div
                             key={i}
                             ref={el => accordionRefs.current[i] = el}
-                            className="expertise-item border border-editorial-border/40 rounded-2xl overflow-hidden bg-white shadow-sm"
+                            className="expertise-item border border-editorial-border/60 rounded-2xl overflow-hidden bg-editorial-silk/90 shadow-sm"
                         >
                             {/* Accordion Header */}
                             <button
@@ -322,7 +330,7 @@ const domainExpertise = [
 
                                     <button
                                         onClick={() => window.__lenis?.scrollTo('#appointment')}
-                                        className="flex items-center gap-2 text-xs md:text-[10px] font-bold tracking-[0.2em] uppercase text-editorial-accent hover:text-editorial-text transition-colors"
+                                        className="flex items-center gap-2 text-sm md:text-base font-medium tracking-wide text-editorial-accent hover:text-editorial-text transition-colors"
                                     >
                                         Consult Practitioner
                                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
@@ -340,22 +348,22 @@ const domainExpertise = [
                     
                     {/* Left: Navigation List - STICKY */}
                     <div className="col-span-5 sticky top-32 space-y-2">
-                        {domainExpertise.map((item, i) => (
+                        {orderedDomainExpertise.map((item, i) => (
                             <button
                                 key={i}
                                 onClick={() => setActiveTab(i)}
-                                className={`expertise-item group w-full text-left p-6 md:p-8 border-b border-editorial-border/30 transition-all duration-500 relative flex items-center justify-between outline-none ${activeTab === i ? 'bg-white shadow-sm border-editorial-accent/30' : 'hover:bg-white/40'}`}
+                                className={`expertise-item group w-full text-left p-6 md:p-8 border-b border-editorial-border/40 transition-all duration-500 relative flex items-center justify-between outline-none ${activeTab === i ? 'bg-editorial-silk shadow-sm border-editorial-accent/40' : 'hover:bg-editorial-silk/70'}`}
                             >
                                 <div className="flex items-center gap-6">
-                                    <span className={`font-mono text-[10px] tracking-widest uppercase transition-colors duration-500 ${activeTab === i ? 'text-editorial-accent' : 'text-editorial-subtext/30'}`}>
+                                    <span className={`font-mono text-[10px] tracking-widest uppercase transition-colors duration-500 ${activeTab === i ? 'text-editorial-accent' : 'text-editorial-subtext'}`}>
                                         {item.ref}
                                     </span>
-                                    <h3 className={`font-serif text-2xl transition-all duration-500 ${activeTab === i ? 'text-editorial-text pl-2' : 'text-editorial-subtext/60 group-hover:text-editorial-subtext'}`}>
+                                    <h3 className={`font-serif text-2xl transition-all duration-500 ${activeTab === i ? 'text-editorial-text pl-2' : 'text-editorial-subtext group-hover:text-editorial-subtext'}`}>
                                         {item.title}
                                     </h3>
                                 </div>
-                                <div className={`transition-all duration-500 transform ${activeTab === i ? 'opacity-100 translate-x-0 text-editorial-accent' : 'opacity-0 -translate-x-4'}`}>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <div className={`transition-all duration-500 transform ${activeTab === i ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}>
+                                    <svg className="text-editorial-accent" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                     </svg>
                                 </div>
@@ -368,23 +376,23 @@ const domainExpertise = [
 
                     {/* Right: Detailed Content Display */}
                     <div className="col-span-7">
-                        <div ref={detailCardRef} key={desktopTab} className="expertise-detail-card bg-white p-8 md:p-12 lg:p-14 border border-editorial-border/30 rounded-3xl relative overflow-hidden min-h-[580px] flex flex-col justify-between">
+                        <div ref={detailCardRef} key={desktopTab} className="expertise-detail-card bg-editorial-silk/95 p-8 md:p-12 lg:p-14 border border-editorial-border/50 rounded-3xl relative overflow-hidden min-h-[580px] flex flex-col justify-between">
                             
                             {/* Decorative Icon Background */}
-                            <div className="absolute -top-12 -right-12 text-editorial-accent/5 transform rotate-12 scale-[3]">
-                                {React.createElement(domainExpertise[desktopTab].icon)}
+                            <div className="absolute -top-12 -right-12 text-editorial-border transform rotate-12 scale-[3]">
+                                {React.createElement(orderedDomainExpertise[desktopTab].icon)}
                             </div>
 
                             <div className="relative z-10 space-y-10">
                                 <div className="space-y-6">
                                     <div className="text-editorial-accent bg-editorial-accent/5 w-14 h-14 rounded-2xl flex items-center justify-center">
-                                        {React.createElement(domainExpertise[desktopTab].icon)}
+                                        {React.createElement(orderedDomainExpertise[desktopTab].icon)}
                                     </div>
                                     <h4 className="font-serif text-3xl md:text-4xl text-editorial-text leading-tight">
-                                        {domainExpertise[desktopTab].title}
+                                        {orderedDomainExpertise[desktopTab].title}
                                     </h4>
                                     <div className="space-y-4">
-                                        {domainExpertise[desktopTab].description.map((p, i) => (
+                                        {orderedDomainExpertise[desktopTab].description.map((p, i) => (
                                             <p key={i} className="text-sm md:text-base text-editorial-text leading-relaxed font-normal max-w-2xl">
                                                 {p}
                                             </p>
@@ -397,7 +405,7 @@ const domainExpertise = [
                                         Areas of Clinical Focus
                                     </p>
                                     <div className="grid grid-cols-2 gap-x-8 gap-y-3">
-                                        {domainExpertise[desktopTab].specialties.map((spec, i) => (
+                                        {orderedDomainExpertise[desktopTab].specialties.map((spec, i) => (
                                             <div key={i} className="flex items-start gap-2.5 group/spec">
                                                 <span className="w-1.5 h-1.5 rounded-full bg-editorial-accent mt-2.5 group-hover/spec:scale-150 transition-transform flex-shrink-0"></span>
                                                 <p className="text-sm md:text-base text-editorial-text font-medium leading-tight">
@@ -419,7 +427,7 @@ const domainExpertise = [
                                 </div>
                                 <button
                                     onClick={() => window.__lenis?.scrollTo('#appointment')}
-                                    className="group flex items-center gap-2 text-xs md:text-[10px] font-bold tracking-[0.2em] uppercase text-editorial-accent hover:text-editorial-text transition-colors"
+                                    className="group flex items-center gap-2 text-sm md:text-base font-medium tracking-wide text-editorial-accent hover:text-editorial-text transition-colors"
                                 >
                                     Consult Practitioner
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="transform group-hover:translate-x-1 transition-transform">
@@ -436,17 +444,17 @@ const domainExpertise = [
                     <div className="space-y-6 group">
                         <p className="text-[11px] font-bold tracking-[0.4em] uppercase text-editorial-accent">Academic Integration</p>
                         <h4 className="font-serif text-3xl text-editorial-text leading-tight group-hover:text-editorial-accent transition-colors duration-500">Faculty Member at Leading Institutions</h4>
-                        <p className="text-lg text-editorial-subtext/70 leading-relaxed">Combining 7+ years of teaching with active clinical duty to mentor the next generation of gynaecological specialists.</p>
+                        <p className="text-lg text-editorial-subtext leading-relaxed">Combining 7+ years of teaching with active clinical duty to mentor the next generation of gynaecological specialists.</p>
                     </div>
                     <div className="space-y-6 group">
                         <p className="text-[11px] font-bold tracking-[0.4em] uppercase text-editorial-accent">Research Impact</p>
                         <h4 className="font-serif text-3xl text-editorial-text leading-tight group-hover:text-editorial-accent transition-colors duration-500">Published Clinical Research</h4>
-                        <p className="text-lg text-editorial-subtext/70 leading-relaxed">Contributing to peer-reviewed journals with a focus on maternal safety and innovative surgical protocols.</p>
+                        <p className="text-lg text-editorial-subtext leading-relaxed">Contributing to peer-reviewed journals with a focus on maternal safety and innovative surgical protocols.</p>
                     </div>
                     <div className="space-y-6 group">
                         <p className="text-[11px] font-bold tracking-[0.4em] uppercase text-editorial-accent">Global Connectivity</p>
                         <h4 className="font-serif text-3xl text-editorial-text leading-tight group-hover:text-editorial-accent transition-colors duration-500">Multilingual Care</h4>
-                        <p className="text-lg text-editorial-subtext/70 leading-relaxed">Bridging cultural gaps through fluency in Tamil, English, Hindi, Telugu, and Bengali for inclusive patient journeys.</p>
+                        <p className="text-lg text-editorial-subtext leading-relaxed">Bridging cultural gaps through fluency in Tamil, English, Hindi, Telugu, and Bengali for inclusive patient journeys.</p>
                     </div>
                 </div>
             </div>

@@ -60,7 +60,7 @@ const About = () => {
             </h2>
 
             <div className="about-reveal max-w-md hidden lg:block">
-              <p className="font-serif text-2xl text-editorial-subtext/90 leading-relaxed italic border-l-2 border-editorial-accent/40 pl-6">
+              <p className="font-serif text-2xl text-editorial-subtext leading-relaxed italic border-l-2 border-editorial-accent/40 pl-6">
                 "A foremost Consultant Obstetrician, Gynaecologist, and Fertility Specialist at MGM Malar Hospital, dedicated to elevating the standard of community healthcare."
               </p>
             </div>
@@ -73,7 +73,7 @@ const About = () => {
             
             {/* Mobile Quote */}
             <div className="about-reveal lg:hidden">
-              <p className="font-serif text-xl sm:text-2xl text-editorial-subtext/90 leading-relaxed italic border-l-2 border-editorial-accent/40 pl-6">
+              <p className="font-serif text-xl sm:text-2xl text-editorial-subtext leading-relaxed italic border-l-2 border-editorial-accent/40 pl-6">
                 "A foremost Consultant Obstetrician, Gynaecologist, and Fertility Specialist at MGM Malar Hospital, dedicated to elevating the standard of community healthcare."
               </p>
             </div>
@@ -106,13 +106,13 @@ const About = () => {
         <div className="about-reveal mt-16 sm:mt-24">
           <div className="p-8 md:p-12 bg-editorial-accent/5 border border-editorial-accent/20 rounded-3xl italic font-serif text-center relative overflow-hidden group hover:bg-editorial-accent/10 transition-colors duration-700">
             {/* Decorative quotation mark */}
-            <span className="absolute top-4 left-8 text-6xl text-editorial-accent/20 font-serif leading-none select-none">"</span>
+            <span className="absolute top-4 left-8 text-6xl text-editorial-border font-serif leading-none select-none">"</span>
             
             <p className="text-xl md:text-2xl lg:text-3xl text-editorial-text leading-relaxed max-w-5xl mx-auto">
               Her clinical excellence has been recognised at the highest levels, including an Appreciation Award from the Honourable Chief Minister, a Best Doctor Award at Thiruvarur Medical College and recognition during the Gaja cyclone.
             </p>
 
-            <span className="absolute bottom-4 right-8 text-6xl text-editorial-accent/20 font-serif leading-none select-none rotate-180">"</span>
+            <span className="absolute bottom-4 right-8 text-6xl text-editorial-border font-serif leading-none select-none rotate-180">"</span>
           </div>
         </div>
       </div>

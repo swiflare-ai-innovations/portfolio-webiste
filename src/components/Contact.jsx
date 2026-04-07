@@ -94,7 +94,7 @@ const Contact = () => {
     };
 
     return (
-        <section ref={sectionRef} id="contact" className="relative bg-editorial-bg pt-12 md:pt-16 lg:pt-20 overflow-hidden flex flex-col justify-between">
+        <section ref={sectionRef} id="contact" className="relative bg-editorial-bg pt-10 md:pt-12 lg:pt-14 overflow-hidden flex flex-col justify-between">
             
             {/* The Cinematic Signature Background */}
             <div className="absolute bottom-0 left-0 w-full overflow-hidden pointer-events-none select-none z-0" style={{ opacity: 0, visibility: 'hidden' }}>
@@ -106,7 +106,7 @@ const Contact = () => {
             <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 w-full">
                 
                 {/* Grand Finale Header */}
-                <div className="contact-reveal mb-12 md:mb-32 space-y-2 md:space-y-4" style={{ opacity: 0, visibility: 'hidden' }}>
+                <div className="contact-reveal mb-10 md:mb-16 space-y-2 md:space-y-3" style={{ opacity: 0, visibility: 'hidden' }}>
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-editorial-accent/10 border border-editorial-accent/20 rounded-full mb-2 md:mb-4">
                         <span className="w-1.5 h-1.5 rounded-full bg-editorial-accent"></span>
                         <span className="text-[11px] md:text-[10px] font-bold tracking-[0.3em] uppercase text-editorial-subtext">Contact</span>
@@ -117,39 +117,39 @@ const Contact = () => {
                     </h2>
                 </div>
 
-                <div className="contact-grid grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-12 md:mb-32">
+                <div className="contact-grid grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10 items-start mb-10 md:mb-14">
                     
                     {/* The Command Center Box */}
-                    <div className="contact-reveal lg:col-span-7 bg-editorial-text text-editorial-silk p-12 md:p-20 relative overflow-hidden group shadow-2xl" style={{ opacity: 0, visibility: 'hidden' }}>
-                        <div className="relative z-10 space-y-16">
+                    <div className="contact-reveal lg:col-span-7 bg-editorial-silk text-editorial-text p-8 md:p-12 relative overflow-hidden group shadow-2xl border border-editorial-border/60" style={{ opacity: 0, visibility: 'hidden' }}>
+                        <div className="relative z-10 space-y-10">
                             <div className="space-y-4">
-                                <span className="text-[10px] font-bold tracking-[0.4em] uppercase opacity-40">Command Center</span>
+                                <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-editorial-subtext">Command Center</span>
                                 <h3 className="font-serif text-4xl md:text-5xl">Secure your <br />consultation</h3>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <a href="tel:+918344795191" className="block space-y-3 group/link">
-                                    <p className="text-xs md:text-[9px] font-bold uppercase tracking-widest text-editorial-silk/60">Direct Connection</p>
-                                    <p className="font-serif text-2xl md:text-3xl transition-transform duration-500 group-hover/link:translate-x-2">
+                                    <p className="text-xs md:text-[9px] font-bold uppercase tracking-widest text-editorial-subtext">Direct Connection</p>
+                                    <p className="font-serif text-xl md:text-2xl transition-transform duration-500 group-hover/link:translate-x-2">
                                         +91 83447 95191
                                     </p>
                                     <div className="h-px w-0 group-hover/link:w-full bg-editorial-accent transition-all duration-700"></div>
                                 </a>
                                 <a href="mailto:kanaga25jan@gmail.com" className="block space-y-3 group/link">
-                                    <p className="text-xs md:text-[9px] font-bold uppercase tracking-widest text-editorial-silk/60">Editorial Channel</p>
-                                    <p className="font-serif text-2xl md:text-3xl transition-transform duration-500 group-hover/link:translate-x-2 break-words">
+                                    <p className="text-xs md:text-[9px] font-bold uppercase tracking-widest text-editorial-subtext">Editorial Channel</p>
+                                    <p className="font-serif text-xl md:text-2xl transition-transform duration-500 group-hover/link:translate-x-2 break-words">
                                         kanaga25jan@gmail.com
                                     </p>
                                     <div className="h-px w-0 group-hover/link:w-full bg-editorial-accent transition-all duration-700"></div>
                                 </a>
                             </div>
 
-                            <div className="pt-12 border-t border-white/10 flex justify-between items-center">
+                            <div className="pt-8 border-t border-editorial-border/40 flex justify-between items-center">
                                 <div className="space-y-1">
-                                    <p className="text-[9px] uppercase tracking-widest opacity-40">Medical Registration</p>
+                                    <p className="text-[9px] uppercase tracking-widest text-editorial-subtext">Medical Registration</p>
                                     <p className="text-xs font-mono">TN-MED_BOARD-CERT_2026</p>
                                 </div>
-                                <div className="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center group-hover:border-editorial-accent transition-all duration-700">
+                                <div className="w-16 h-16 rounded-full border border-editorial-border/60 flex items-center justify-center group-hover:border-editorial-accent transition-all duration-700">
                                     <span className="text-2xl">→</span>
                                 </div>
                             </div>
@@ -157,18 +157,18 @@ const Contact = () => {
 
                         {/* Texture Layer */}
                         <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/noise-lines.png')]"></div>
-                        <div className="absolute top-0 right-0 p-8 opacity-10 text-[60px] font-serif pointer-events-none select-none">K.</div>
+                        <div className="absolute top-0 right-0 p-8 text-[60px] text-editorial-border font-serif pointer-events-none select-none">K.</div>
                     </div>
 
                     {/* The Precision Map Hybrid */}
-                    <div className="lg:col-span-5 space-y-12 lg:pt-20">
-                        <div className="contact-reveal relative p-12 border border-editorial-border/40 bg-white/60 backdrop-blur-xl group overflow-hidden rounded-3xl shadow-sm" style={{ opacity: 0, visibility: 'hidden' }}>
+                    <div className="lg:col-span-5 space-y-8 lg:pt-8">
+                        <div className="contact-reveal relative p-8 md:p-10 border border-editorial-border/60 bg-editorial-silk/90 backdrop-blur-xl group overflow-hidden rounded-3xl shadow-sm" style={{ opacity: 0, visibility: 'hidden' }}>
                             <div className="absolute top-0 right-0 p-4 flex gap-2">
                                 <div className="w-1.5 h-1.5 rounded-full bg-editorial-text animate-pulse"></div>
                                 <div className="map-line w-8 h-px bg-editorial-border origin-right"></div>
                             </div>
                             
-                            <div className="space-y-8 relative z-10">
+                            <div className="space-y-6 relative z-10">
                                 <div className="space-y-4">
                                     <span className="text-[10px] font-bold tracking-[0.4em] uppercase">Primary Center</span>
                                     <h4 className="font-serif text-3xl leading-tight">Adyar, Chennai</h4>
@@ -176,7 +176,7 @@ const Contact = () => {
                                 
                                 <div className="space-y-6">
                                     <address className="not-italic font-serif text-xl text-editorial-subtext leading-relaxed border-l-2 border-editorial-accent/30 pl-8">
-                                        <span className="block text-editorial-text font-medium text-sm mb-2 opacity-60 uppercase tracking-wider">MGM Malar Hospital</span>
+                                        <span className="block text-editorial-text font-medium text-sm mb-2 uppercase tracking-wider">MGM Malar Hospital</span>
                                         Old No. 52 New No. 111, 1 st Main Road,<br />
                                         Gandhi Nagar, Adyar,<br />
                                         Chennai - 600020
@@ -184,11 +184,11 @@ const Contact = () => {
                                    
                                 </div>
 
-                                <div className="pt-8 flex items-center gap-4">
+                                <div className="pt-5 flex items-center gap-4">
                                     <div className="w-10 h-10 rounded-full border border-editorial-border flex items-center justify-center">
                                         <span className="text-[8px] font-bold">MAP</span>
                                     </div>
-                                    <p className="text-[9px] font-bold tracking-[0.2em] uppercase opacity-40">Coordinates Verified</p>
+                                    <p className="text-[9px] font-bold tracking-[0.2em] uppercase text-editorial-subtext">Coordinates Verified</p>
                                 </div>
                             </div>
 
@@ -196,20 +196,17 @@ const Contact = () => {
                             <div className="absolute bottom-0 left-0 w-12 h-12 border-b border-l border-editorial-border/40 translate-x-[-10px] translate-y-[10px] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-700"></div>
                         </div>
 
-                        <div className="contact-reveal px-12 text-editorial-subtext/60 font-serif text-lg leading-relaxed" style={{ opacity: 0, visibility: 'hidden' }}>
-                            Serving the community of Thanjavur, Coimbatore, and Chennai with scientific precision since 2005.
-                        </div>
                     </div>
 
                 </div>
             </div>
 
             {/* The True Footer Signature */}
-            <div className="relative z-10 w-full border-t border-editorial-border/30 bg-editorial-silk py-12 px-6 backdrop-blur-md">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+            <div className="relative z-10 w-full border-t border-editorial-border/30 bg-editorial-silk py-8 px-6 backdrop-blur-md">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                     <div className="flex flex-col items-center md:items-start gap-3">
                         <p className="font-serif text-2xl text-editorial-text tracking-tight">Dr. Kanaga Lakshmi</p>
-                        <p className="text-[8px] font-bold tracking-[0.6em] uppercase opacity-40">Consultant Fertility Specialist</p>
+                        <p className="text-[8px] font-bold tracking-[0.6em] uppercase text-editorial-subtext">Consultant Fertility Specialist</p>
                     </div>
 
                     <ul className="flex flex-wrap justify-center gap-x-12 gap-y-4">
@@ -225,7 +222,7 @@ const Contact = () => {
                                 <a 
                                     href={link.href} 
                                     onClick={(e) => handleNavClick(e, link.href)}
-                                    className="text-[11px] md:text-[9px] font-bold tracking-[0.3em] uppercase text-editorial-text hover:opacity-100 opacity-60 transition-all duration-500"
+                                    className="text-[11px] md:text-[9px] font-bold tracking-[0.3em] uppercase text-editorial-text transition-all duration-500"
                                 >
                                     {link.name}
                                 </a>
@@ -234,8 +231,8 @@ const Contact = () => {
                     </ul>
 
                     <div className="text-center md:text-right">
-                        <p className="text-[11px] md:text-[8px] font-bold tracking-[0.3em] uppercase opacity-40">© 2026 Professional Portfolio</p>
-                        <p className="text-[11px] md:text-[8px] font-bold tracking-[0.3em] uppercase opacity-40">All Rights Reserved</p>
+                        <p className="text-[11px] md:text-[8px] font-bold tracking-[0.3em] uppercase text-editorial-subtext">© 2026 Professional Portfolio</p>
+                        <p className="text-[11px] md:text-[8px] font-bold tracking-[0.3em] uppercase text-editorial-subtext">All Rights Reserved</p>
                     </div>
                 </div>
             </div>

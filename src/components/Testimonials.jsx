@@ -146,8 +146,8 @@ const Testimonials = () => {
                                     key={i} 
                                     className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 select-none pb-4"
                                 >
-                                    <div className="h-full bg-white/70 backdrop-blur-xl border border-editorial-border/30 p-6 md:p-8 rounded-2xl transition-all duration-500 flex flex-col group relative shadow-sm text-left hover:border-editorial-accent/40">
-                                        <div className="text-editorial-accent mb-4 opacity-40 group-hover:opacity-100 transition-opacity">
+                                    <div className="h-full bg-editorial-silk/90 backdrop-blur-xl border border-editorial-border/50 p-6 md:p-8 rounded-2xl transition-all duration-500 flex flex-col group relative shadow-sm text-left hover:border-editorial-accent/40">
+                                        <div className="text-editorial-accent mb-4">
                                             <Quote size={20} strokeWidth={1.5} />
                                         </div>
                                         

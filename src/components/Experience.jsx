@@ -145,7 +145,7 @@ const Experience = () => {
                 {/* Grid Container */}
                 <div className="cards-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 relative z-10 w-full">
                     {timelineData.map((item, i) => (
-                        <div key={i} className="milestone-card relative p-8 bg-white/60 backdrop-blur-xl border border-editorial-border/40 rounded-2xl hover:border-editorial-accent/30 hover:bg-white/90 transition-all duration-500 flex flex-col justify-between group overflow-hidden shadow-sm hover:shadow-md">
+                        <div key={i} className="milestone-card relative p-8 bg-editorial-silk/90 backdrop-blur-xl border border-editorial-border/60 rounded-2xl hover:border-editorial-accent/40 hover:bg-editorial-silk transition-all duration-500 flex flex-col justify-between group overflow-hidden shadow-sm hover:shadow-md">
                             {/* Decorative Year Number Background */}
                             <span className="absolute -bottom-4 -right-1 font-serif text-7xl lg:text-8xl text-editorial-text opacity-[0.03] group-hover:opacity-[0.05] group-hover:scale-110 transition-all duration-700 pointer-events-none select-none z-0">
                                 {item.year}
@@ -171,7 +171,7 @@ const Experience = () => {
                             </div>
 
                             <div className="pt-4 mt-4 border-t border-editorial-border/30 relative z-10 flex-grow-0 flex flex-col items-start gap-2">
-                                <span className="text-[11px] md:text-[10px] font-bold tracking-widest uppercase text-editorial-text opacity-100 break-words w-full">
+                                <span className="text-[11px] md:text-[10px] font-bold tracking-widest uppercase text-editorial-text break-words w-full">
                                     {item.institution}
                                 </span>
                                 <span className="text-[10px] md:text-[9px] font-bold tracking-[0.2em] uppercase text-editorial-subtext shrink-0">

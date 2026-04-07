@@ -14,6 +14,8 @@ export default {
         'editorial-subtext': 'var(--color-subtext)',
         'editorial-border': 'var(--color-border)',
         'editorial-silk': 'var(--color-silk)',
+        'editorial-heading': 'var(--color-heading)',
+        'editorial-secondary': 'var(--color-secondary)',
       },
       fontFamily: {
         sans: ['Open Sans', 'sans-serif'],

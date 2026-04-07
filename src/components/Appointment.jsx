@@ -82,7 +82,7 @@ const Appointment = () => {
                         <div className="appointment-reveal space-y-4" style={{ opacity: 0, visibility: 'hidden' }}>
                             <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-editorial-accent">The Protocol</p>
                             <h3 className="font-serif text-3xl text-editorial-text leading-tight">Professional Triage & Coordination</h3>
-                            <p className="text-editorial-subtext/70 font-light leading-relaxed">
+                            <p className="text-editorial-subtext font-light leading-relaxed">
                                 Our clinical team will evaluate your request and coordinate a prioritized consultation within 24 hours.
                             </p>
                         </div>
@@ -91,7 +91,7 @@ const Appointment = () => {
                             <div className="space-y-2">
                                 <p className="text-xs md:text-[9px] uppercase tracking-widest text-editorial-text">Primary Hospital</p>
                                 <p className="font-serif text-xl">MGM Malar Hospital, Adyar</p>
-                                <p className="text-xs text-editorial-subtext/60 max-w-[200px]">Old No. 52 New No. 111, 1 st Main Road, Gandhi Nagar, Chennai - 600020</p>
+                                <p className="text-xs text-editorial-subtext max-w-[200px]">Old No. 52 New No. 111, 1 st Main Road, Gandhi Nagar, Chennai - 600020</p>
                             </div>
                             
                             <div className="space-y-1">
@@ -110,7 +110,7 @@ const Appointment = () => {
                     </div>
 
                     {/* Right: The Intake Form */}
-                    <div className="lg:col-span-8 bg-white/60 p-8 md:p-12 border border-editorial-border/40 backdrop-blur-xl rounded-3xl appointment-reveal order-1 lg:order-2" style={{ opacity: 0, visibility: 'hidden' }}>
+                    <div className="lg:col-span-8 bg-editorial-silk/90 p-8 md:p-12 border border-editorial-border/60 backdrop-blur-xl rounded-3xl appointment-reveal order-1 lg:order-2" style={{ opacity: 0, visibility: 'hidden' }}>
                         <form ref={formRef} onSubmit={handleSubmit} className="space-y-10">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                                 {/* Name Input */}
@@ -118,7 +118,7 @@ const Appointment = () => {
                                     <input 
                                         type="text" 
                                         placeholder="Full Name" 
-                                        className="w-full bg-transparent border-b border-editorial-border/80 py-4 font-serif text-xl focus:outline-none focus:border-editorial-accent transition-colors placeholder:text-editorial-subtext/30"
+                                        className="w-full bg-transparent border-b border-editorial-border/80 py-4 font-serif text-xl focus:outline-none focus:border-editorial-accent transition-colors placeholder:text-editorial-subtext"
                                         required
                                     />
                                     <div className="absolute bottom-0 left-0 w-0 h-px bg-editorial-accent transition-all duration-700 group-focus-within:w-full"></div>
@@ -129,7 +129,7 @@ const Appointment = () => {
                                     <input 
                                         type="tel" 
                                         placeholder="Contact Number" 
-                                        className="w-full bg-transparent border-b border-editorial-border/80 py-4 font-serif text-xl focus:outline-none focus:border-editorial-accent transition-colors placeholder:text-editorial-subtext/30"
+                                        className="w-full bg-transparent border-b border-editorial-border/80 py-4 font-serif text-xl focus:outline-none focus:border-editorial-accent transition-colors placeholder:text-editorial-subtext"
                                         required
                                     />
                                     <div className="absolute bottom-0 left-0 w-0 h-px bg-editorial-accent transition-all duration-700 group-focus-within:w-full"></div>
@@ -174,7 +174,7 @@ const Appointment = () => {
                                 <textarea 
                                     rows="3" 
                                     placeholder="Brief Medical Insight or Inquiry" 
-                                    className="w-full bg-transparent border-b border-editorial-border/80 py-4 font-serif text-lg focus:outline-none focus:border-editorial-accent transition-colors resize-none placeholder:text-editorial-subtext/30"
+                                        className="w-full bg-transparent border-b border-editorial-border/80 py-4 font-serif text-lg focus:outline-none focus:border-editorial-accent transition-colors resize-none placeholder:text-editorial-subtext"
                                 ></textarea>
                                 <div className="absolute bottom-0 left-0 w-0 h-px bg-editorial-accent transition-all duration-700 group-focus-within:w-full"></div>
                             </div>
@@ -183,10 +183,10 @@ const Appointment = () => {
                             <div className="pt-6">
                                 <button 
                                     type="submit" 
-                                    className="group relative px-12 py-5 bg-editorial-text text-white overflow-hidden transition-all duration-500 hover:bg-editorial-accent"
+                                    className="group relative px-12 py-5 bg-editorial-secondary text-white overflow-hidden transition-all duration-500 hover:bg-editorial-accent"
                                 >
                                     <div className="relative z-10 flex items-center gap-4">
-                                        <span className="text-[10px] font-bold tracking-[0.4em] uppercase">Request Consultation</span>
+                                        <span className="text-sm md:text-base font-medium tracking-wide">Request Consultation</span>
                                         <span className="group-hover:translate-x-2 transition-transform duration-500">→</span>
                                     </div>
                                     <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700"></div>
@@ -197,7 +197,7 @@ const Appointment = () => {
                 </div>
 
                 {/* Footnote */}
-                <div className="appointment-reveal mt-24 text-center opacity-60" style={{ opacity: 0, visibility: 'hidden' }}>
+                <div className="appointment-reveal mt-24 text-center" style={{ opacity: 0, visibility: 'hidden' }}>
                     <p className="text-[11px] md:text-[9px] font-mono tracking-widest uppercase text-editorial-text">
                         All clinical data is handled with maximum privacy standards • 2026 Registry_KL
                     </p>

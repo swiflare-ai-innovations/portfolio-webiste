@@ -114,17 +114,10 @@ const Header = () => {
                     <a
                         href="#home"
                         onClick={(e) => handleNavClick(e, '#home')}
-                        className="nav-logo flex items-center gap-2 sm:gap-3 group shrink-0"
+                        className="nav-logo flex items-center group shrink-0"
                     >
-                        <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-serif font-bold text-lg sm:text-xl transition-all duration-500 ${
-                            scrolled 
-                                ? 'bg-editorial-accent text-white' 
-                                : 'bg-editorial-charcoal text-white group-hover:bg-editorial-accent'
-                        }`}>
-                            K.
-                        </div>
-                        <div className={`flex flex-col transition-opacity duration-300 ${scrolled ? 'opacity-100' : 'opacity-90'}`}>
-                            <span className={`font-serif text-sm sm:text-base md:text-xl font-bold tracking-tight leading-none text-editorial-charcoal whitespace-nowrap`}>
+                        <div className="flex flex-col">
+                            <span className={`font-serif text-sm sm:text-base md:text-xl font-bold tracking-tight leading-none text-editorial-heading whitespace-nowrap`}>
                                 Dr. K. Kanaga Lakshmi
                             </span>
 
@@ -154,7 +147,7 @@ const Header = () => {
                             <a
                                 href="#appointment"
                                 onClick={(e) => handleNavClick(e, '#appointment')}
-                                className="px-6 py-2.5 bg-editorial-charcoal text-white text-[10px] font-bold tracking-[0.25em] uppercase hover:bg-editorial-accent transition-all duration-500 rounded-full border border-editorial-charcoal/10 hover:shadow-lg active:scale-95"
+                                className="px-6 py-2.5 bg-editorial-secondary text-white text-xs md:text-sm font-medium tracking-wide hover:bg-editorial-accent transition-all duration-500 rounded-full border border-editorial-secondary/30 hover:shadow-lg active:scale-95"
                             >
                                 Book Appointment
                             </a>
@@ -167,7 +160,7 @@ const Header = () => {
                                 className="p-1.5 text-editorial-charcoal hover:text-editorial-accent transition-all duration-300 flex items-center gap-2 group"
                                 aria-label="Open menu"
                             >
-                                <span className="text-[10px] font-bold uppercase tracking-widest hidden sm:block opacity-0 group-hover:opacity-100 transition-opacity">Menu</span>
+                                <span className="text-[10px] font-bold uppercase tracking-widest hidden sm:block text-editorial-subtext">Menu</span>
                                 <div className="w-10 h-10 rounded-full border border-editorial-border/20 flex items-center justify-center group-hover:bg-editorial-accent group-hover:text-white transition-all duration-500">
                                     <Menu size={20} strokeWidth={1.5} />
                                 </div>
@@ -197,8 +190,7 @@ const Header = () => {
                 >
                     {/* Header Area - Matched with Main Header Logo */}
                     <div className="flex justify-between items-center p-8 sm:p-12 border-b border-editorial-border/10">
-                        <div className="flex items-center gap-3">
-                             <div className="w-10 h-10 rounded-full bg-editorial-accent text-white flex items-center justify-center font-serif font-bold text-xl">K.</div>
+                        <div className="flex items-center">
                              <div className="flex flex-col">
                                 <span className="font-serif text-base sm:text-lg font-bold tracking-tight text-editorial-charcoal leading-none">Dr. K. Kanaga Lakshmi</span>
                                 <span className="text-[10px] uppercase tracking-widest text-editorial-accent mt-1 font-bold">Obstetrician and Gynaecologist</span>
@@ -224,7 +216,7 @@ const Header = () => {
                                         onClick={(e) => handleNavClick(e, link.href)}
                                         className="mobile-link block group flex items-baseline gap-6"
                                     >
-                                        <span className="text-xs font-sans font-bold tracking-[0.3em] text-editorial-accent/30 group-hover:text-editorial-accent transition-colors duration-300">0{i + 1}</span>
+                                        <span className="text-xs font-sans font-bold tracking-[0.3em] text-editorial-accent transition-colors duration-300">0{i + 1}</span>
                                         <span className="font-serif text-5xl sm:text-6xl font-medium text-editorial-charcoal group-hover:text-editorial-accent transition-all duration-500 transform group-hover:translate-x-2 inline-block">
                                             {link.name}
                                         </span>
@@ -239,9 +231,9 @@ const Header = () => {
                                 <a
                                     href="#appointment"
                                     onClick={(e) => handleNavClick(e, '#appointment')}
-                                    className="flex items-center justify-between group bg-editorial-charcoal text-white p-6 rounded-2xl hover:bg-editorial-accent transition-all duration-500 shadow-xl"
+                                    className="flex items-center justify-between group bg-editorial-secondary text-white p-6 rounded-2xl hover:bg-editorial-accent transition-all duration-500 shadow-xl"
                                 >
-                                    <span className="text-xs font-bold uppercase tracking-[0.3em] flex items-center gap-3">
+                                    <span className="text-sm font-medium tracking-wide flex items-center gap-3">
                                         <div className="w-1.5 h-1.5 rounded-full bg-editorial-accent"></div>
                                         Request Consultation
                                     </span>
