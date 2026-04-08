@@ -189,12 +189,13 @@ const Header = () => {
                     }`}
                 >
                     {/* Header Area - Matched with Main Header Logo */}
-                    <div className="flex justify-between items-center p-8 sm:p-12 border-b border-editorial-border/10">
-                        <div className="flex items-center">
-                             <div className="flex flex-col">
-                                <span className="font-serif text-base sm:text-lg font-bold tracking-tight text-editorial-charcoal leading-none">Dr. K. Kanaga Lakshmi</span>
-                                <span className="text-[10px] uppercase tracking-widest text-editorial-accent mt-1 font-bold">Obstetrician and Gynaecologist</span>
-                             </div>
+                    <div
+                        className="flex justify-between items-center p-8 sm:p-12 border-b border-editorial-border/10"
+                        onClick={() => setIsMenuOpen(false)}
+                    >
+                        <div className="flex flex-col">
+                            <span className="font-serif text-base sm:text-lg font-bold tracking-tight text-editorial-charcoal leading-none">Dr. K. Kanaga Lakshmi</span>
+                            <span className="text-[10px] uppercase tracking-widest text-editorial-accent mt-1 font-bold">Obstetrician and Gynaecologist</span>
                         </div>
                         <button 
                             onClick={() => setIsMenuOpen(false)}

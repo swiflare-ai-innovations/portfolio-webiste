@@ -2,7 +2,7 @@
 import { gsap } from 'gsap';
 import { CustomEase } from 'gsap/all';
 import { ChevronDown, Award, Clock, Shield } from 'lucide-react';
-import doctorimg from '../assets/image.png';
+import doctorimg from '../assets/doctorimage.png';
 
 gsap.registerPlugin(CustomEase);
 
@@ -38,8 +38,8 @@ const Hero = () => {
             gsap.set('.hero-reveal', { opacity: 0, y: 30 });
             gsap.set('.hero-parallax', { opacity: 0 });
             gsap.set(imageRef.current, { 
-                scale: 1.1,
-                filter: 'brightness(0.9)',
+                scale: 1.02,
+                filter: 'brightness(0.95)',
                 borderRadius: '60% 40% 30% 70% / 40% 30% 70% 60%'
             });
             
@@ -70,7 +70,7 @@ const Hero = () => {
             // 2. Image reveal with organic morph
             .fromTo(imageRef.current,
                 { 
-                    scale: 1.3, 
+                    scale: 1.08, 
                     opacity: 0,
                     borderRadius: '80% 20% 50% 50% / 30% 50% 50% 70%'
                 },
@@ -335,7 +335,7 @@ const Hero = () => {
                             <img 
                                 src={doctorimg}
                                 alt="Dr. Kanaga Lakshmi" 
-                                className="w-full h-full object-cover object-center scale-105 hover:scale-115 transition-transform duration-[10s]"
+                                className="w-full h-full object-cover object-[50%_20%] scale-100 hover:scale-[1.05] transition-transform duration-700"
                                 loading="eager"
                             />
                             
