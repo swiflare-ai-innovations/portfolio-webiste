@@ -89,15 +89,15 @@ const Appointment = () => {
 
                         <div className="appointment-reveal pt-8 border-t border-editorial-border/60 space-y-8" style={{ opacity: 0, visibility: 'hidden' }}>
                             <div className="space-y-2">
-                                <p className="text-xs md:text-[9px] uppercase tracking-widest text-editorial-text">Primary Hospital</p>
-                                <p className="font-serif text-xl">MGM Malar Hospital, Adyar</p>
-                                <p className="text-xs text-editorial-subtext max-w-[200px]">Old No. 52 New No. 111, 1 st Main Road, Gandhi Nagar, Chennai - 600020</p>
+                                <p className="text-xs md:text-[9px] uppercase tracking-widest text-editorial-text">Consultation Clinic</p>
+                                <p className="font-serif text-xl">Teachers Colony, Adyar</p>
+                                <p className="text-xs text-editorial-subtext max-w-[200px]">9, Teachers Colony, Venkata Rathnam Nagar Extension, Venkata Rathinam Nagar, Chennai - 600020</p>
                             </div>
                             
                             <div className="space-y-1">
                                 <p className="text-xs md:text-[9px] uppercase tracking-widest text-editorial-text">Direct Contact</p>
-                                <a href="tel:+918344795191" className="block font-serif text-2xl text-editorial-text hover:text-editorial-accent transition-colors">
-                                    +91 83447 95191
+                                <a href="tel:+918825821977" className="block font-serif text-2xl text-editorial-text hover:text-editorial-accent transition-colors">
+                                    +91 88258 21977
                                 </a>
                             </div>
                         </div>

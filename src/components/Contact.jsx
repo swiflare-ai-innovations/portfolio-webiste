@@ -128,10 +128,10 @@ const Contact = () => {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <a href="tel:+918344795191" className="block space-y-3 group/link">
+                                <a href="tel:+918825821977" className="block space-y-3 group/link">
                                     <p className="text-xs md:text-[9px] font-bold uppercase tracking-widest text-editorial-subtext">Direct Connection</p>
                                     <p className="font-serif text-xl md:text-2xl transition-transform duration-500 group-hover/link:translate-x-2">
-                                        +91 83447 95191
+                                        +91 88258 21977
                                     </p>
                                     <div className="h-px w-0 group-hover/link:w-full bg-editorial-accent transition-all duration-700"></div>
                                 </a>
@@ -176,10 +176,11 @@ const Contact = () => {
                                 
                                 <div className="space-y-6">
                                     <address className="not-italic font-serif text-xl text-editorial-subtext leading-relaxed border-l-2 border-editorial-accent/30 pl-8">
-                                        <span className="block text-editorial-text font-medium text-sm mb-2 uppercase tracking-wider">MGM Malar Hospital</span>
-                                        Old No. 52 New No. 111, 1 st Main Road,<br />
-                                        Gandhi Nagar, Adyar,<br />
-                                        Chennai - 600020
+                                        <span className="block text-editorial-text font-medium text-sm mb-2 uppercase tracking-wider">Consultation Clinic</span>
+                                        9, Teachers Colony,<br />
+                                        Venkata Rathnam Nagar Extension,<br />
+                                        Venkata Rathinam Nagar, Adyar,<br />
+                                        Chennai, Tamil Nadu 600020
                                     </address>
                                    
                                 </div>
