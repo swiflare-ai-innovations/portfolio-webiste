@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Lenis from 'lenis';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -12,16 +12,11 @@ import Header from './components/Header';
 import Appointment from './components/Appointment';
 import Testimonials from './components/Testimonials';
 import { themes } from './themes';
-import ThemeSwitcher from './components/ThemeSwitcher';
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState(() => {
-    return localStorage.getItem('doctor-portfolio-theme') || 'b10';
-  });
-
   useEffect(() => {
-    // Apply theme colors from themes.js
-    const theme = themes.find((t) => t.id === currentTheme) || themes.find((t) => t.id === 'b10') || themes[0];
+    // Apply theme colors from themes.js (specifically b10 - Bright Violet Neon Violet)
+    const theme = themes.find((t) => t.id === 'b10') || themes[0];
     const root = document.documentElement;
     
     Object.entries(theme.colors).forEach(([key, value]) => {
@@ -76,7 +71,7 @@ const App = () => {
       window.removeEventListener('load', handleLoad);
       clearTimeout(refreshTimeout);
     };
-  }, [currentTheme]);
+  }, []);
 
   return (
     <div className="font-sans text-editorial-text bg-editorial-silk min-h-screen">
@@ -90,7 +85,6 @@ const App = () => {
             <Appointment />
             <Contact />
         </main>
-        <ThemeSwitcher currentTheme={currentTheme} onThemeChange={setCurrentTheme} />
     </div>
   );
 }

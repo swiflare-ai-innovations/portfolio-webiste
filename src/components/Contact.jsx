@@ -180,7 +180,7 @@ const Contact = () => {
                                         9, Teachers Colony,<br />
                                         Venkata Rathnam Nagar Extension,<br />
                                         Venkata Rathinam Nagar, Adyar,<br />
-                                        Chennai, Tamil Nadu 600020
+                                          Chennai, Tamil Nadu 600020
                                     </address>
                                    
                                 </div>
