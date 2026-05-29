@@ -64,11 +64,11 @@ const About = () => {
                 "A foremost Consultant Obstetrician, Gynaecologist, and Fertility Specialist at MGM Malar Hospital, dedicated to elevating the standard of community healthcare."
               </p>
             </div>
-
+ 
             {/* Expertise Pillbox Grid removed */}
           </div>
 
-          {/* Right Column: Long Content & Expertise Cards */}
+            {/* Right Column: Long Content & Expertise Cards */}
           <div className="lg:col-span-7 space-y-16 order-2 relative z-10 w-full lg:pt-8">
             
             {/* Mobile Quote */}
@@ -113,10 +113,10 @@ const About = () => {
             </p>
 
             <span className="absolute bottom-4 right-8 text-6xl text-editorial-border font-serif leading-none select-none rotate-180">"</span>
-          </div>
+          </div>                     
         </div>
       </div>
-      
+           
       {/* Decorative Text Seal */}
       <div className="absolute top-[20%] right-[-10%] opacity-[0.02] pointer-events-none rotate-90 select-none hidden 2xl:block">
         <span className="text-[15rem] font-serif text-editorial-text">Legacy</span>
