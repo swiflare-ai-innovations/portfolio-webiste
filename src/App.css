@@ -7,7 +7,7 @@
 }
 
 /* Remove default Vite styles that restrict layout */
-body {
+body {   
   margin: 0;
   display: flex;
   place-items: initial;
